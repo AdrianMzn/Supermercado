@@ -1,0 +1,9 @@
+h1 {
+    text-align: center;
+}
+
+nav {
+    background-color: bisque;
+    text-align: center;
+    height: 2rem;
+}
