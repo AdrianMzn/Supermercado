@@ -9,9 +9,9 @@ import { Componente2Component } from './componente/componente2/componente2.compo
 import { Componente3Component } from './componente/componente3/componente3.component';
 
 const misRutas: Routes = [
-  {path: 'c1', component: Componente1Component},
-  {path: 'c2', component: Componente2Component},
-  {path: 'c3', component: Componente3Component}
+  { path: 'c1', component: Componente1Component },
+  { path: 'c2', component: Componente2Component },
+  { path: 'c3', component: Componente3Component }
 ];
 
 @NgModule({
