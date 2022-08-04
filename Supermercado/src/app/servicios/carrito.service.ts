@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class CartService {
 
-  private baseUrl = 'http://localhost:4210/addedProducts'
+  private baseUrl = 'http://localhost:4230/addedProducts'
 
   constructor(private http: HttpClient) { }
 
@@ -33,7 +33,7 @@ export class CartService {
 
   plusOne(product: Producto): Observable<Producto> {
     const urlToUpdate = `${this.baseUrl}/${product.id}`
-    const updatedProduct = { ...product, quantity: product.cantidad + 1 }
+    const updatedProduct = { ...product, cantidad: product.cantidad + 1 }
 
     return this.http.put<Producto>(urlToUpdate, updatedProduct)
   }

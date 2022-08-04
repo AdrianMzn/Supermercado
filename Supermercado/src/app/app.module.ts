@@ -11,6 +11,7 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CarritoItemComponent } from './componentes/carrito-item/carrito-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -32,7 +33,7 @@ const misRutas: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(misRutas)
+    RouterModule.forRoot(misRutas),HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
