@@ -1,0 +1,10 @@
+
+    <td>{{prod.productName}}</td>
+    <td>{{prod.price}}€</td>
+    <td>{{prod.quantity}} 
+        <span>
+            <button id="removeItem" (click)="onDecrease(prod)">-</button>
+            <button id="addItem" (click)="onIncrease(prod)">+</button>
+        </span>
+    </td>
+    <td><button id="removeProduct" (click)="onDelete(prod)">X</button></td>

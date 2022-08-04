@@ -1,0 +1,19 @@
+<div class="shoppingCart">
+    <table id="shoppingCart">
+        <tr>
+            <th colspan="2">Product</th>
+            <th rowspan="2">Quantity</th>
+            <th rowspan="2">Remove</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+        <tr app-cart-item *ngFor="let prod of addedProducts" 
+        [prod]="prod" 
+        (onDeleteProduct)="removeProduct(prod)"
+        (onDecreaseProduct)="decreaseQuantity(prod)"
+        (onIncreaseProduct)="increaseQuantity(prod)"
+        ></tr>
+    </table>
+</div>
