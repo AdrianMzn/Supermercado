@@ -1,0 +1,56 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "username": "mock",
+            "name": "Mock",
+            "cart": [
+                {
+                    "id": 0,
+                    "productName": "milk",
+                    "quantity": 1,
+                    "price": 2.3
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "username": "mocky",
+            "name": "Mocky",
+            "cart": [
+                {
+                    "id": 1,
+                    "productName": "flour",
+                    "quantity": 2,
+                    "price": 2.5
+                },
+                {
+                    "id": 2,
+                    "productName": "bread",
+                    "quantity": 5,
+                    "price": 1.3
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "id": 0,
+            "productName": "milk",
+            "quantity": 10,
+            "price": 3.3
+        }, 
+        {
+            "id": 1,
+            "productName": "flour",
+            "quantity": 20,
+            "price": 2.5
+        },
+        {
+            "id": 2,
+            "productName": "bread",
+            "quantity": 15,
+            "price": 1.3
+        }
+    ]
+}
