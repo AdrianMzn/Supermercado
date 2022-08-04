@@ -1,0 +1,25 @@
+div[class="container"]{
+    display:flex; 
+    text-align: center; 
+
+    margin-top: 50px;
+}
+
+.center {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+#info1_container:hover {
+    background-color:aquamarine;
+}
+
+#info2_container:hover {
+    background-color:coral;
+}
+
+#info3_container:hover {
+    background-color:darkgoldenrod;
+}

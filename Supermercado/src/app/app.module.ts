@@ -12,11 +12,14 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CarritoItemComponent } from './componentes/carrito-item/carrito-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './componentes/home/home.component';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
   { path: 'c2', component: Componente2Component },
-  { path: 'c3', component: Componente3Component }
+  { path: 'c3', component: Componente3Component },
+  { path: 'home', component: HomeComponent },
+  {path: '', redirectTo: 'home', pathMatch: 'full'},  // si no hay ruta va a home
 ];
 
 @NgModule({
@@ -30,6 +33,7 @@ const misRutas: Routes = [
     NavbarComponent,
     CarritoComponent,
     CarritoItemComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
