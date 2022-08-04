@@ -2,10 +2,18 @@ h1 {
     text-align: center;
 }
 
+.box {
+    display: grid;
+    height: 100%;
+    justify-items: center;
+}
+
 nav {
     background-color: bisque;
     text-align: center;
-    height: 2rem;
+    width: 100%;
+    padding: 1em;
+    font-size: larger;
 }
 
 footer{
