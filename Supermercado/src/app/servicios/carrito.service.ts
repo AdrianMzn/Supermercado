@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Observable, interval } from 'rxjs'
-import { Product } from '../Product';
+import { Producto } from '../models/producto.model';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -18,33 +18,33 @@ export class CartService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl)
+  getAll(): Observable<Producto[]> {
+    return this.http.get<Producto[]>(this.baseUrl)
   }
 
-  add(product: Product): Observable<Product>{
-    return this.http.post<Product>(this.baseUrl, product)
+  add(product: Producto): Observable<Producto>{
+    return this.http.post<Producto>(this.baseUrl, product)
   }
 
-  delete(product: Product): Observable<Product>{
+  delete(product: Producto): Observable<Producto>{
     const urlToRemove = `${this.baseUrl}/${product.id}`
-    return this.http.delete<Product>(urlToRemove)
+    return this.http.delete<Producto>(urlToRemove)
   }
 
-  plusOne(product: Product): Observable<Product> {
+  plusOne(product: Producto): Observable<Producto> {
     const urlToUpdate = `${this.baseUrl}/${product.id}`
-    const updatedProduct = { ...product, quantity: product.quantity + 1 }
+    const updatedProduct = { ...product, quantity: product.cantidad + 1 }
 
-    return this.http.put<Product>(urlToUpdate, updatedProduct)
+    return this.http.put<Producto>(urlToUpdate, updatedProduct)
   }
 
-  minusOne(product: Product): Observable<Product>{
+  minusOne(product: Producto): Observable<Producto>{
     const urlToUpdate = `${this.baseUrl}/${product.id}`
-    const updatedProduct = {...product, quantity: product.quantity-=1}
-    if(updatedProduct.quantity == 0) {
-      return this.http.delete<Product>(urlToUpdate)
+    const updatedProduct = {...product, cantidad: product.cantidad-=1}
+    if(updatedProduct.cantidad == 0) {
+      return this.http.delete<Producto>(urlToUpdate)
     }
-    return this.http.put<Product>(urlToUpdate, updatedProduct)
+    return this.http.put<Producto>(urlToUpdate, updatedProduct)
   }
 
 }

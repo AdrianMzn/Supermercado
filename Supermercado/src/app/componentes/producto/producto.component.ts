@@ -12,10 +12,10 @@ export class ProductoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.generarProductos()
-  }
+/*     this.generarProductos()
+ */  }
 
-  generarProductos() {
+/*   generarProductos() {
     let producto1: Producto = {
       id: 1,
       seccion: 'lacteos',
@@ -36,5 +36,5 @@ export class ProductoComponent implements OnInit {
     }
     this.productos.push(producto2)
   }
-
+ */
 }

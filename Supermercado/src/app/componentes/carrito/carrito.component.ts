@@ -1,15 +1,15 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
-import { Product } from 'src/app/Product';
-import { CartService } from 'src/app/services/cart.service';
+import { Producto } from 'src/app/models/producto.model';
+import { CartService } from 'src/app/servicios/carrito.service';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-carrito',
+  templateUrl: './carrito.component.html',
+  styleUrls: ['./carrito.component.css']
 })
-export class CartComponent implements OnInit {
+export class CarritoComponent implements OnInit {
 
-  addedProducts: Product[] = []
+  addedProducts: Producto[] = []
 
   constructor(private cartService: CartService) { 
   }
@@ -18,16 +18,16 @@ export class CartComponent implements OnInit {
     this.cartService.getAll().subscribe((products) => (this.addedProducts = products))
   }
 
-  removeProduct(product: Product){
+  removeProduct(product: Producto){
     console.log(product)
     this.cartService.delete(product).subscribe((products) => (this.addedProducts = this.addedProducts.filter((prod) => (prod.id !== product.id))))
   }
 
-  increaseQuantity(product:Product){
+  increaseQuantity(product:Producto){
     this.cartService.plusOne(product).subscribe((product) => (this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))))
   }
 
-  decreaseQuantity(product:Product){
+  decreaseQuantity(product:Producto){
     this.cartService.minusOne(product).subscribe((product) => (this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))))
   }
 

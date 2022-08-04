@@ -1,17 +1,17 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Product } from 'src/app/Product';
+import { Producto } from 'src/app/models/producto.model';
 
 @Component({
-  selector: '[app-cart-item]',
-  templateUrl: './cart-item.component.html',
-  styleUrls: ['./cart-item.component.css']
+  selector: '[app-carrito-item]',
+  templateUrl: './carrito-item.component.html',
+  styleUrls: ['./carrito-item.component.css']
 })
-export class CartItemComponent implements OnInit {
+export class CarritoItemComponent implements OnInit {
 
-  @Input() prod!: Product
-  @Output() onDeleteProduct: EventEmitter<Product> = new EventEmitter()
-  @Output() onDecreaseProduct: EventEmitter<Product> = new EventEmitter()
-  @Output() onIncreaseProduct: EventEmitter<Product> = new EventEmitter()
+  @Input() prod!: Producto
+  @Output() onDeleteProduct: EventEmitter<Producto> = new EventEmitter()
+  @Output() onDecreaseProduct: EventEmitter<Producto> = new EventEmitter()
+  @Output() onIncreaseProduct: EventEmitter<Producto> = new EventEmitter()
 
 
   constructor() { }
@@ -19,18 +19,18 @@ export class CartItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onDelete(product: Product){
+  onDelete(product: Producto){
     this.onDeleteProduct.emit(product)
   }
 
-  onDecrease(product: Product){
-    if (product.quantity-1 >= 0){
+  onDecrease(product: Producto){
+    if (product.cantidad-1 >= 0){
       this.onDecreaseProduct.emit(product)
     }
   }
 
-  onIncrease(product: Product){
-    if (product.quantity+1 <= product.max){
+  onIncrease(product: Producto){
+    if (product.cantidad+1 <= product.cantidadMaxima){
       this.onIncreaseProduct.emit(product)
     }
   }
