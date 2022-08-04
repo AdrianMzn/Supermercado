@@ -7,6 +7,7 @@ import { ProductoComponent } from './componentes/producto/producto.component';
 import { Componente1Component } from './componente/componente1/componente1.component';
 import { Componente2Component } from './componente/componente2/componente2.component';
 import { Componente3Component } from './componente/componente3/componente3.component';
+import { HeaderComponent } from './componentes/header/header.component';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -20,7 +21,8 @@ const misRutas: Routes = [
     ProductoComponent,
     Componente1Component,
     Componente2Component,
-    Componente3Component
+    Componente3Component,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
