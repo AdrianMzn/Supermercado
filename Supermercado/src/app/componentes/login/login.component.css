@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+form {
+}
+
+.contenido {
+    display: grid;
+    height: 100%;
+    justify-items: center;
+}
+
+
+label {
+    padding: 1em;
+    font-size: large;
+}
+
+.btn_login {
+    margin: 2rem;
+    padding: 1em;
+}
