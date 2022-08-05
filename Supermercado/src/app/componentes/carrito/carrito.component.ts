@@ -11,6 +11,7 @@ export class CarritoComponent implements OnInit {
 
   addedProducts: Producto[] = []
   totalPrice: number = 0
+  getTotalPrice(array: Producto[]):number {return Math.round(array.reduce((acc, prod) => (acc + prod.precio * prod.cantidad), 0) * 100) / 100;}
 
   constructor(private cartService: CartService) { 
   }
@@ -18,7 +19,7 @@ export class CarritoComponent implements OnInit {
   ngOnInit(): void {
     this.cartService.getAll().subscribe((products) => {
       this.addedProducts = products
-      this.totalPrice = Math.round(this.addedProducts.reduce((acc, prod) => (acc + prod.precio)*prod.cantidad, 0)*100)/100
+      this.totalPrice = this.getTotalPrice(this.addedProducts)
     })
   }
   removeProduct(product: Producto){
@@ -27,7 +28,7 @@ export class CarritoComponent implements OnInit {
       .delete(product)
       .subscribe((products) => {
         this.addedProducts = this.addedProducts.filter((prod) => (prod.id !== product.id))
-        this.totalPrice = Math.round(this.addedProducts.reduce((acc, prod) => (acc + prod.precio)*prod.cantidad, 0)*100)/100
+        this.totalPrice = this.getTotalPrice(this.addedProducts)
       })
   }
 
@@ -36,7 +37,7 @@ export class CarritoComponent implements OnInit {
     .plusOne(product)
     .subscribe((product) => {
       this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))
-      this.totalPrice = Math.round(this.addedProducts.reduce((acc, prod) => (acc + prod.precio)*prod.cantidad, 0)*100)/100
+      this.totalPrice = this.getTotalPrice(this.addedProducts)
     })
   }
 
@@ -45,7 +46,7 @@ export class CarritoComponent implements OnInit {
     .minusOne(product)
     .subscribe((product) => {
       this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))
-      this.totalPrice = Math.round(this.addedProducts.reduce((acc, prod) => (acc + prod.precio)*prod.cantidad, 0)*100)/100
+      this.totalPrice = this.getTotalPrice(this.addedProducts)
     })
   }
 

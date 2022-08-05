@@ -109,19 +109,11 @@
   ],
   "addedProducts": [
     {
-      "id": 0,
-      "seccion": "frutas",
-      "nombre": "manzana",
-      "precio": 2.3,
-      "cantidad": 3,
-      "cantidadMaxima": 20
-    },
-    {
       "id": 8,
       "seccion": "pescado",
       "nombre": "atun",
       "precio": 8.3,
-      "cantidad": 4,
+      "cantidad": 1,
       "cantidadMaxima": 20
     },
     {
@@ -129,15 +121,15 @@
       "seccion": "carnes",
       "nombre": "chuleta",
       "precio": 22.3,
-      "cantidad": 3,
+      "cantidad": 1,
       "cantidadMaxima": 20
     },
     {
-      "id": 9,
-      "seccion": "frutas",
-      "nombre": "manzana",
-      "precio": 2.3,
-      "cantidad": 15,
+      "id": 7,
+      "seccion": "pescado",
+      "nombre": "bonito",
+      "precio": 9.3,
+      "cantidad": 3,
       "cantidadMaxima": 20
     }
   ]
