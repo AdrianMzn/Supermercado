@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  nombreUsuario: string = "Jose";
+  logeado: boolean = true;
+  
+  constructor() { 
+
+  }
 
   ngOnInit(): void {
+  }
+
+  isLogged(){
+
+    return this.logeado;
   }
 
 }

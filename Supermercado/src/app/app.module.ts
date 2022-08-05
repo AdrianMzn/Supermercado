@@ -22,6 +22,8 @@ const misRutas: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'carrito', component: CarritoComponent },
+  { path: 'productos', component: ProductoComponent },
+
   {path: '', redirectTo: 'home', pathMatch: 'full'},  // si no hay ruta va a home
 ];
 

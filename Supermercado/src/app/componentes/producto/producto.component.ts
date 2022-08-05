@@ -22,4 +22,21 @@ export class ProductoComponent implements OnInit {
     this.cartService.add(producto).subscribe((prod) => (this.productosCarrito.push(prod)))
   }
 
+  getColor(seccion: string){
+    if(seccion == 'frutas'){
+      return 'mediumseagreen';
+    }
+
+    else if( seccion == 'carnes'){
+      return 'khaki';
+    }
+
+    else if( seccion == 'pescado'){
+      return 'cadetblue';
+    }
+
+    return '';
+      
+  }
+
 }

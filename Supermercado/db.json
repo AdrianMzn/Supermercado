@@ -123,6 +123,14 @@
       "precio": 8.3,
       "cantidad": 1,
       "cantidadMaxima": 20
+    },
+    {
+      "id": 9,
+      "seccion": "frutas",
+      "nombre": "manzana",
+      "precio": 2.3,
+      "cantidad": 15,
+      "cantidadMaxima": 20
     }
   ]
 }

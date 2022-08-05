@@ -1,9 +1,24 @@
-<ul>
-    <li *ngFor="let producto of productos">
-        {{producto.id}}
-        {{producto.nombre}}
-        {{producto.seccion}}
-        {{producto.precio}}
-        <button id="addProduct" (click)="addProducto(producto)">Añadir producto</button>
-    </li>
-</ul>
+<div class="container center" style="margin-top: 40px">
+    <div *ngFor="let producto of productos">
+        <div class="tarjetaProducto center" [style.background-color]="getColor(producto.seccion)">
+            <div class="item">
+                <h2>{{producto.nombre}}</h2>
+                <div>
+                    Identificador: {{producto.id}}
+                </div>
+                
+                <div>
+                    Seccion: {{producto.seccion}}
+                </div>
+                
+                <div>
+                    Precio: {{producto.precio}}
+                </div>
+                
+            </div>
+            
+            <button id="addProduct" (click)="addProducto(producto)" style="margin-top:20px; margin-bottom:10px;">Añadir producto</button>
+        </div>
+        
+    </div>
+</div>

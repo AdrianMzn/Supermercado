@@ -10,19 +10,20 @@
           <li class="nav-item active">
             <a class="nav-link" aria-current="page" routerLink="home" >Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="productos">Productos</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="home">Contactanos</a>
           </li>
         </ul>
 
-        <div class="container text-right">
-            <form class="form-inline my-2 my-lg-0" style="display: flex">
-              <input style="width: 70%;" class="form-control" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-dark" style="margin-left: 5%" type="submit">Search</button>
-            </form>
+        <div class="container text-right" style="display: flex; width: 200%; max-width: 500px;">
+              <input style="width: 100%;" class="form-control" type="search" placeholder="Buscar producto..." aria-label="Search">
+              <button class="btn btn-outline-dark" style="margin-left: 5%" type="submit">Buscar</button>
         </div>
 
-        <div class="container text-right" style="display: flex; margin-left: 30%" >
+        <div class="container text-right" style="display: flex; margin-left: 10%" >
 
           <!--
               <a class="nav-link" routerLink="login" >
@@ -33,9 +34,9 @@
               <button class="btn"><img src="assets\user.png" alt="" style="width: 30px"></button> <br>
               <select style="width: 30px; height: 10px;" name="demo" id="#">
                 <option disabled selected="selected" value="default"></option>
-                <option value="one">Option 1</option>
-                <option value="two">Option 2</option>
-                <option value="three">Option 3</option>
+                <option *ngIf="isLogged()" disabled value="nombreUsuario">{{nombreUsuario}}</option>
+                <option *ngIf="isLogged()" value="desconectar">Log Out</option>
+                <option *ngIf="!isLogged()" value="iniciarSesion">Sign in</option>
               </select>
             </div>
           
