@@ -6,6 +6,6 @@ REPARTO DE TAREAS 1:
 
         Noe -> Formulario de registro (POST en el json)
 
-        Sergei -> servicios
+        Sergei -> servicios -- he hecho más modificaciones en el carrito
 
         Raquel -> Productos
