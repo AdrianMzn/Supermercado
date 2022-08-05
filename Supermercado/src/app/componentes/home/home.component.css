@@ -3,6 +3,7 @@ div[class="container row"]{
     text-align: center; 
     margin-top: 50px;
     margin-left: 15%;
+    background-color: white;
 }
 
 .center {
@@ -13,12 +14,16 @@ div[class="container row"]{
 
 #info1_container:hover {
     background-color:aquamarine;
+    transform: scale(1.05);
 }
 
 #info2_container:hover {
     background-color:coral;
+    transform: scale(1.05);
 }
 
 #info3_container:hover {
     background-color:darkgoldenrod;
+    transform: scale(1.05);
 }
+
