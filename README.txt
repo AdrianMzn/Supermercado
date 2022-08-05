@@ -4,7 +4,7 @@ REPARTO DE TAREAS 1:
 
         Dome -> Hacer la pagina de login
 
-        Noe -> Formulario de contactar
+        Noe -> Formulario de registro (POST en el json)
 
         Sergei -> servicios
 
