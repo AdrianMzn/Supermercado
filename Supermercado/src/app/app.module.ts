@@ -13,12 +13,15 @@ import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { CarritoItemComponent } from './componentes/carrito-item/carrito-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
   { path: 'c2', component: Componente2Component },
   { path: 'c3', component: Componente3Component },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'carrito', component: CarritoComponent },
   {path: '', redirectTo: 'home', pathMatch: 'full'},  // si no hay ruta va a home
 ];
 
@@ -34,6 +37,7 @@ const misRutas: Routes = [
     CarritoComponent,
     CarritoItemComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,3 @@
-
 REPARTO DE TAREAS 1:
 
         Adrian -> Web Pricnipal y navbar
