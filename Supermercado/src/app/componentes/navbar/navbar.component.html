@@ -23,9 +23,23 @@
         </div>
 
         <div class="container text-right" style="display: flex; margin-left: 30%" >
-            <a class="nav-link" routerLink="login" >
-              <button class="btn"><img src="assets\user.png" alt="" style="width: 30px"></button>
-            </a>
+
+          <!--
+              <a class="nav-link" routerLink="login" >
+                  
+              </a>
+          -->
+            <div>
+              <button class="btn"><img src="assets\user.png" alt="" style="width: 30px"></button> <br>
+              <select style="width: 30px; height: 10px;" name="demo" id="#">
+                <option disabled selected="selected" value="default"></option>
+                <option value="one">Option 1</option>
+                <option value="two">Option 2</option>
+                <option value="three">Option 3</option>
+              </select>
+            </div>
+          
+            
             
             <a class="nav-link" routerLink="carrito" >
               <button class="btn " style="margin-left: 5%" ><img src="assets\carrito.png" alt="" style="width: 30px"></button>
@@ -36,3 +50,5 @@
       </div>
     </nav>
 </div>
+
+
