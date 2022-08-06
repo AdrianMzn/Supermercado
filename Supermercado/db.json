@@ -109,7 +109,7 @@
   ],
   "addedProducts": [
     {
-      "id": 1,
+      "id": 0,
       "seccion": "frutas",
       "nombre": "manzana",
       "precio": 2.3,
@@ -117,18 +117,18 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 4,
-      "seccion": "carnes",
-      "nombre": "chuleta",
-      "precio": 22.3,
-      "cantidad": 4,
+      "id": 7,
+      "seccion": "pescado",
+      "nombre": "bonito",
+      "precio": 9.3,
+      "cantidad": 8,
       "cantidadMaxima": 20
     },
     {
-      "id": 5,
-      "seccion": "carnes",
-      "nombre": "jamon",
-      "precio": 27.3,
+      "id": 2,
+      "seccion": "frutas",
+      "nombre": "melocoton",
+      "precio": 3.3,
       "cantidad": 2,
       "cantidadMaxima": 20
     }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
-import { Observable, interval } from 'rxjs'
+import { Observable, interval, Subject } from 'rxjs'
+import { tap } from 'rxjs';
 import { Producto } from '../models/producto.model';
 
 const httpOptions = {
@@ -15,6 +16,11 @@ const httpOptions = {
 export class CartService {
 
   private baseUrl = 'http://localhost:4230/addedProducts'
+  private refreshCart = new Subject<void>()
+
+  get getRefreshCart(){
+    return this.refreshCart
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +29,13 @@ export class CartService {
   }
 
   add(product: Producto): Observable<Producto>{
-    return this.http.post<Producto>(this.baseUrl, product)
+    return this.http
+      .post<Producto>(this.baseUrl, product)
+      .pipe(
+        tap(() => {
+          this.refreshCart.next()
+        })
+      )
   }
 
   delete(product: Producto): Observable<Producto>{

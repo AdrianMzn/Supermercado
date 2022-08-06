@@ -17,6 +17,13 @@ export class CarritoComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    this.cartService.getRefreshCart.subscribe(() => {
+      this.getAllCartItems()
+    })
+    this.getAllCartItems()
+  }
+
+  getAllCartItems(){
     this.cartService.getAll().subscribe((products) => {
       this.addedProducts = products
       this.totalPrice = this.getTotalPrice(this.addedProducts)
