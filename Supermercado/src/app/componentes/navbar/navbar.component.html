@@ -30,21 +30,27 @@
                   
               </a>
           -->
-            <div>
-              <button class="btn"><img src="assets\user.png" alt="" style="width: 30px"></button> <br>
-              <select style="width: 30px; height: 10px;" name="demo" id="#">
-                <option disabled selected="selected" value="default"></option>
-                <option *ngIf="isLogged()" disabled value="nombreUsuario">{{nombreUsuario}}</option>
-                <option *ngIf="isLogged()" value="desconectar">Log Out</option>
-                <option *ngIf="!isLogged()" value="iniciarSesion">Sign in</option>
-              </select>
-            </div>
           
-            
-            
             <a class="nav-link" routerLink="carrito" >
               <button class="btn " style="margin-left: 5%" ><img src="assets\carrito.png" alt="" style="width: 30px"></button>
             </a>
+
+            <div class="container">  
+              <ul style="list-style-type: none; margin-top:5px">
+                <li>
+                  <a><img src="assets\user.png" alt="" style="width: 30px"></a>
+                  <div class="submenu container">
+                    <ul id="navlist" class="center listaUser">
+                      <li style="text-decoration: underline black;" *ngIf="isLogged()">{{nombreUsuario}}</li>
+                      <li *ngIf="isLogged()" ><a class="nav-link" routerLink="login">Log Out</a></li>
+                      <li *ngIf="!isLogged()" class="optionUser"><a class="nav-link" routerLink="login">Log In</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            
             
         </div>
         

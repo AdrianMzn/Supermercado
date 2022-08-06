@@ -22,4 +22,7 @@ export class NavbarComponent implements OnInit {
     return this.logeado;
   }
 
+  routerLinkTo(component: string){
+
+  }
 }

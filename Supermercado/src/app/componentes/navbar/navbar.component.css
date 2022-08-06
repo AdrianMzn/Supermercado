@@ -3,3 +3,39 @@
     top: 0;
     z-index: 1030; /* to prevent the navbar getting covered up by other content */
 }
+
+.submenu{
+    position: absolute;
+    display: none;
+    width: 120px;
+}
+
+.submenu ul li{
+    display: block;
+    width: 90px;
+}
+
+nav ul li:hover .submenu{
+    display: block;
+    
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.listaUser {
+    background-color:aliceblue;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 10px;
+    position:relative; right:50px;
+    width: 155px;
+}
+
+li:hover { background-color:#2EA620; }
+
