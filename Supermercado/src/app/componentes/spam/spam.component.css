@@ -1,0 +1,29 @@
+.sugerencias{
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: center;
+}
+
+.tarjetaProducto{
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20%;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.item {
+    flex: 30%;
+}

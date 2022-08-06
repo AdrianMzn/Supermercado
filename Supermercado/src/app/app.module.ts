@@ -14,6 +14,7 @@ import { CarritoItemComponent } from './componentes/carrito-item/carrito-item.co
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { SpamComponent } from './componentes/spam/spam.component';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -40,6 +41,7 @@ const misRutas: Routes = [
     CarritoItemComponent,
     HomeComponent,
     LoginComponent,
+    SpamComponent,
   ],
   imports: [
     BrowserModule,

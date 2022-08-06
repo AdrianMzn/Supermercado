@@ -1,6 +1,11 @@
 .shoppingCart{
     display: flex;
-    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;    
+}
+#shoppingCart{
+    max-width: 500px;
+    margin: 20px;
 }
 /* caption {
     background-color: rgb(37, 0, 247);
