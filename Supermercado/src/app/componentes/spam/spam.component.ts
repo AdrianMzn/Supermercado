@@ -27,11 +27,15 @@ export class SpamComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartService.getAll().subscribe((productos) => {
-        const preferencia = this.analizarPreferencias(productos)
-        this.prodService.getAll().subscribe((productos) => {
+        if (productos.length>=1){
+          this.productosCarrito = productos
+          const preferencia = this.analizarPreferencias(productos)
+          this.prodService.getAll().subscribe((productos) => {
           const productosPreferidos = productos.filter(x => x.seccion == preferencia)
           this.productosSugeridos = productosPreferidos.slice(0,3)
         })
+        }
+        
     })
   }
 

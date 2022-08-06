@@ -1,4 +1,5 @@
-<div class="sugerencias">
+<h4 *ngIf="productosCarrito.length>=1">Sugerencias basadas en sus preferencias</h4>
+<div class="sugerencias" *ngIf="productosCarrito.length>=1">
     <div *ngFor="let producto of productosSugeridos">
         <div class="tarjetaProducto center">
             <div class="item">

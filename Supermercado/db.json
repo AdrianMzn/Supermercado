@@ -109,23 +109,7 @@
   ],
   "addedProducts": [
     {
-      "id": 8,
-      "seccion": "pescado",
-      "nombre": "atun",
-      "precio": 8.3,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 2,
-      "seccion": "frutas",
-      "nombre": "melocoton",
-      "precio": 3.3,
-      "cantidad": 2,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 9,
+      "id": 1,
       "seccion": "frutas",
       "nombre": "manzana",
       "precio": 2.3,
@@ -133,11 +117,19 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 1,
-      "seccion": "frutas",
-      "nombre": "pera",
-      "precio": 2.5,
-      "cantidad": 1,
+      "id": 4,
+      "seccion": "carnes",
+      "nombre": "chuleta",
+      "precio": 22.3,
+      "cantidad": 4,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 5,
+      "seccion": "carnes",
+      "nombre": "jamon",
+      "precio": 27.3,
+      "cantidad": 2,
       "cantidadMaxima": 20
     }
   ]
