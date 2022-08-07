@@ -131,6 +131,22 @@
       "precio": 27.3,
       "cantidad": 15,
       "cantidadMaxima": 20
+    },
+    {
+      "id": 2,
+      "seccion": "frutas",
+      "nombre": "melocoton",
+      "precio": 3.3,
+      "cantidad": 16,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 7,
+      "seccion": "pescado",
+      "nombre": "bonito",
+      "precio": 9.3,
+      "cantidad": 5,
+      "cantidadMaxima": 20
     }
   ]
 }
