@@ -36,14 +36,14 @@ export class ProductoComponent implements OnInit {
       console.log(this.categorias);
     });
     
-
-    
   }
 
-  /*
+  
   addProducto(producto: Producto){
     this.cartService.getAll().subscribe((devuelveprod) => (this.productosCarrito = devuelveprod))
     const productoExiste: Producto|undefined= this.productosCarrito.find(p => producto.nombre==p.nombre)
+    console.log(this.productosCarrito)
+    console.log(productoExiste)
     if(productoExiste){
       this.cartService.plusOne(productoExiste).subscribe((prodActual) => (
         this.productosCarrito = this.productosCarrito.map(p1 => (prodActual.nombre==p1.nombre? prodActual: p1))
@@ -55,9 +55,9 @@ export class ProductoComponent implements OnInit {
       this.cartService.add(nuevoProducto).subscribe((prod) => (this.productosCarrito.push(prod)))
     }
     
-  }*/
+  }
 
-  addProductoID(productoId: number){
+/*   addProductoID(productoId: number){
     let producto: Producto = this.productos.filter(producto => (producto.id == productoId ) )[0];
 
     this.cartService.getAll().subscribe((devuelveprod) => (this.productosCarrito = devuelveprod))
@@ -74,7 +74,7 @@ export class ProductoComponent implements OnInit {
     }
   }
 
-
+ */
   getColor(seccion: string){
     if(seccion == 'frutas'){
       return 'mediumseagreen';

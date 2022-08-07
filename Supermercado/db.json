@@ -381,51 +381,11 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 6,
-      "seccion": "frutas",
-      "nombre": "naranjas",
-      "precio": 2.3,
-      "cantidad": 2,
-      "cantidadMaxima": 20
-    },
-    {
       "id": 4,
       "seccion": "carnes",
       "nombre": "chuletón tomahawk",
       "precio": 22.3,
       "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 14,
-      "seccion": "pescado",
-      "nombre": "bogavante",
-      "precio": 42.9,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 15,
-      "seccion": "panaderia",
-      "nombre": "bollo preñado",
-      "precio": 1.5,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 1,
-      "seccion": "frutas",
-      "nombre": "paraguaya",
-      "precio": 2.5,
-      "cantidad": 2,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 16,
-      "seccion": "frutas",
-      "nombre": "naranjas",
-      "precio": 2.3,
-      "cantidad": 4,
       "cantidadMaxima": 20
     }
   ]
