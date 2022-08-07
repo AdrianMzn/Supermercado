@@ -1,4 +1,30 @@
 <div class="container center" style="margin-top: 40px">
+    <form action="">
+        <div class="form-group" style="display:flex">
+            <div >
+                Seleccione categoría
+                <select id="categoriaSelect" class="form-select" aria-label="Ninguna categoría" (click)="filterProductos()">
+                    <option selected value="undefined">Ninguna categoría</option>
+                </select>
+            </div>
+
+            <div style="margin-left: 50px">
+                Ordenar por
+                <select id="ordenSelect" class="form-select" aria-label="Ningun orden" (click)="filterProductos()">
+                    <option selected value="undefined">No ordenar</option>
+                    <option value="alfabeticamente">Alfabeticamente</option>
+                    <option value="precioMin">Por precio (menor primero)</option>
+                    <option value="precioMax">Por precio (mayor primero)</option>
+                    <option value="porCategoria">Por categoria</option>
+                </select>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+<div id="listaProductos" class="container center" style="margin-top: 40px">
     <div *ngFor="let producto of productos">
         <div class="tarjetaProducto center" [style.border-color]="getColor(producto.seccion)">
             <div class="item">
@@ -17,8 +43,9 @@
 
             </div>
 
-            <button id="addProduct" (click)="addProducto(producto)" style="margin-top:20px; margin-bottom:10px;">Añadir
-                producto</button>
+            <button id="addProduct" (click)="addProductoID(producto.id)" style="margin-top:20px; margin-bottom:10px;">Añadir
+                producto
+            </button>
         </div>
 
     </div>

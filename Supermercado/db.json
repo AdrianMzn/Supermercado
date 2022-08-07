@@ -385,7 +385,7 @@
       "seccion": "frutas",
       "nombre": "naranjas",
       "precio": 2.3,
-      "cantidad": 1,
+      "cantidad": 2,
       "cantidadMaxima": 20
     },
     {
@@ -410,6 +410,14 @@
       "nombre": "bollo preñado",
       "precio": 1.5,
       "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 1,
+      "seccion": "frutas",
+      "nombre": "paraguaya",
+      "precio": 2.5,
+      "cantidad": 4,
       "cantidadMaxima": 20
     }
   ]
