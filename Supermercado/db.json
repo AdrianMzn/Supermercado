@@ -37,7 +37,7 @@
     {
       "id": 0,
       "seccion": "frutas",
-      "nombre": "manzana",
+      "nombre": "naranjas",
       "precio": 2.3,
       "cantidad": 15,
       "cantidadMaxima": 20
@@ -45,7 +45,7 @@
     {
       "id": 1,
       "seccion": "frutas",
-      "nombre": "pera",
+      "nombre": "paraguaya",
       "precio": 2.5,
       "cantidad": 15,
       "cantidadMaxima": 20
@@ -53,7 +53,7 @@
     {
       "id": 2,
       "seccion": "frutas",
-      "nombre": "melocoton",
+      "nombre": "manzana",
       "precio": 3.3,
       "cantidad": 15,
       "cantidadMaxima": 20
@@ -61,7 +61,7 @@
     {
       "id": 3,
       "seccion": "frutas",
-      "nombre": "platano",
+      "nombre": "pimiento",
       "precio": 1.3,
       "cantidad": 15,
       "cantidadMaxima": 20
@@ -69,7 +69,7 @@
     {
       "id": 4,
       "seccion": "carnes",
-      "nombre": "chuleta",
+      "nombre": "chuletón tomahawk",
       "precio": 22.3,
       "cantidad": 15,
       "cantidadMaxima": 20
@@ -101,9 +101,265 @@
     {
       "id": 8,
       "seccion": "pescado",
-      "nombre": "atun",
+      "nombre": "emperador",
       "precio": 8.3,
       "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 9,
+      "seccion": "pescado",
+      "nombre": "salmon",
+      "precio": 18.9,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 10,
+      "seccion": "carnes",
+      "nombre": "salchichon ibérico",
+      "precio": 15.9,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 11,
+      "seccion": "pescado",
+      "nombre": "rape",
+      "precio": 32.6,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 12,
+      "seccion": "pescado",
+      "nombre": "mejillones",
+      "precio": 8.8,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 13,
+      "seccion": "frutas",
+      "nombre": "rabano",
+      "precio": 1.7,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 14,
+      "seccion": "pescado",
+      "nombre": "bogavante",
+      "precio": 42.9,
+      "cantidad": 4,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 15,
+      "seccion": "panaderia",
+      "nombre": "bollo preñado",
+      "precio": 1.5,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 16,
+      "seccion": "panaderia",
+      "nombre": "empanada",
+      "precio": 4.5,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 17,
+      "seccion": "panaderia",
+      "nombre": "baguette",
+      "precio": 0.5,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 18,
+      "seccion": "panaderia",
+      "nombre": "pizza carbonara",
+      "precio": 3.5,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 19,
+      "seccion": "panaderia",
+      "nombre": "napolitanas",
+      "precio": 1.5,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 20,
+      "seccion": "panaderia",
+      "nombre": "Tortillas de trigo",
+      "precio": 1.7,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 21,
+      "seccion": "frutas",
+      "nombre": "tomate",
+      "precio": 3.35,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 22,
+      "seccion": "carnes",
+      "nombre": "picada de ternera",
+      "precio": 5.87,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 23,
+      "seccion": "carnes",
+      "nombre": "morcilla de burgos",
+      "precio": 2.95,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 24,
+      "seccion": "lacteos",
+      "nombre": "batido de chocolate",
+      "precio": 2.4,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 25,
+      "seccion": "lacteos",
+      "nombre": "nata liquida para cocinar",
+      "precio": 1.59,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 26,
+      "seccion": "lacteos",
+      "nombre": "mantequilla",
+      "precio": 2.29,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 27,
+      "seccion": "lacteos",
+      "nombre": "bebida de soja",
+      "precio": 0.85,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 28,
+      "seccion": "lacteos",
+      "nombre": "leche entera botella",
+      "precio": 1.5,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 29,
+      "seccion": "lacteos",
+      "nombre": "Torta del casar queso",
+      "precio": 2.4,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 30,
+      "seccion": "lacteos",
+      "nombre": "café latte capuccino",
+      "precio": 0.75,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 31,
+      "seccion": "pescado",
+      "nombre": "camarones",
+      "precio": 23.95,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 32,
+      "seccion": "frutas",
+      "nombre": "calabacin",
+      "precio": 1.2,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 33,
+      "seccion": "carnes",
+      "nombre": "carne de añojo para guisar",
+      "precio": 7.77,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 34,
+      "seccion": "frutas",
+      "nombre": "calabaza",
+      "precio": 2.7,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 35,
+      "seccion": "carnes",
+      "nombre": "salchichas de pollo",
+      "precio": 1.99,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 36,
+      "seccion": "pescado",
+      "nombre": "cabracho",
+      "precio": 27,
+      "cantidad": 10,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 37,
+      "seccion": "lacteos",
+      "nombre": "queso de cabra",
+      "precio": 2.85,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 38,
+      "seccion": "frutas",
+      "nombre": "sandia",
+      "precio": 4.14,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 39,
+      "seccion": "carnes",
+      "nombre": "torrezno de Soria",
+      "precio": 3.9,
+      "cantidad": 15,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 40,
+      "seccion": "panaderia",
+      "nombre": "pan tostado",
+      "precio": 2.15,
+      "cantidad": 10,
       "cantidadMaxima": 20
     }
   ],
@@ -117,14 +373,6 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 4,
-      "seccion": "carnes",
-      "nombre": "chuleta",
-      "precio": 22.3,
-      "cantidad": 15,
-      "cantidadMaxima": 20
-    },
-    {
       "id": 5,
       "seccion": "carnes",
       "nombre": "jamon",
@@ -133,19 +381,35 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 2,
+      "id": 6,
       "seccion": "frutas",
-      "nombre": "melocoton",
-      "precio": 3.3,
-      "cantidad": 16,
+      "nombre": "naranjas",
+      "precio": 2.3,
+      "cantidad": 1,
       "cantidadMaxima": 20
     },
     {
-      "id": 7,
+      "id": 4,
+      "seccion": "carnes",
+      "nombre": "chuletón tomahawk",
+      "precio": 22.3,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 14,
       "seccion": "pescado",
-      "nombre": "bonito",
-      "precio": 9.3,
-      "cantidad": 5,
+      "nombre": "bogavante",
+      "precio": 42.9,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 15,
+      "seccion": "panaderia",
+      "nombre": "bollo preñado",
+      "precio": 1.5,
+      "cantidad": 1,
       "cantidadMaxima": 20
     }
   ]
