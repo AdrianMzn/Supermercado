@@ -1,14 +1,17 @@
 <h1>Log-in</h1>
- <form action="">     <!-- //ngSubmit="funcion componente login" -->
-    <fieldset class="contenido">
-        <label for="userId">Usuario:</label>
-        <input type="text" id="userId" name="usuario" />
-        <br />
-        <label for="userPw">Contraseña:</label>
-        <input type="password" name="password" id="userPw" />
-    </fieldset>
-</form>
+<div class="container">
+    <form action="">
+        <!-- //ngSubmit="funcion componente login" -->
+        <fieldset class="contenido">
+            <input type="text" id="userId" name="usuario" placeholder="Usuario o email" />
+            <br />
+            <input type="password" name="password" id="userPw" placeholder="Contraseña" />
+        </fieldset>
+    </form>
 
-<div class="contenido">
-    <input class="btn_login" type="submit" value="Iniciar">
+    <div class="contenido">
+        <input class="btn_login" type="submit" value="Iniciar" (click)="iniciarSesion()">
+    </div>
+
+    <p>No tienes cuenta? <a routerLink="registro">Regístrate aquí</a></p>
 </div>

@@ -2,7 +2,7 @@ REPARTO DE TAREAS 1:
 
         Adrian -> Web Pricnipal y navbar
 
-        Dome -> Hacer la pagina de login
+        Dome -> Añadir pagina registro + componente error 404 + comprobacion usuario
 
         Noe -> Formulario de registro (POST en el json)
 

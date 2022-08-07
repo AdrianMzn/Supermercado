@@ -377,7 +377,7 @@
       "seccion": "carnes",
       "nombre": "jamon",
       "precio": 27.3,
-      "cantidad": 15,
+      "cantidad": 2,
       "cantidadMaxima": 20
     },
     {
@@ -417,6 +417,14 @@
       "seccion": "frutas",
       "nombre": "paraguaya",
       "precio": 2.5,
+      "cantidad": 2,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 16,
+      "seccion": "frutas",
+      "nombre": "naranjas",
+      "precio": 2.3,
       "cantidad": 4,
       "cantidadMaxima": 20
     }

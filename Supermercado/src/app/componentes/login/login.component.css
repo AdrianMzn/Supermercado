@@ -1,24 +1,57 @@
+.contenido {
+}
+
 h1 {
     text-align: center;
     padding: 2rem;
+    color: grey;
 }
 
-form {
+#userId, #userPw {
+    width: 22rem;
+    height: 2.5rem;
+    border-color: bisque;
+    border-width: 3px;
+    border-style: solid;
 }
 
 .contenido {
     display: grid;
     height: 100%;
     justify-items: center;
+    padding: 20px;
 }
 
+p{
+    text-align: center;
+    color: grey;
+}
 
+a {
+    color: grey;
+    text-align: center;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: bisque;
+}
+
+/* 
 label {
     padding: 1em;
     font-size: large;
-}
+} */
 
 .btn_login {
-    margin: 2rem;
-    padding: 1em;
+    height: 2.5rem;
+    width: 22rem;
+    background-color: bisque;
+    border-style: none;
+    border-width: 5px;
+    color: grey;
+}
+
+.btn_login:hover {
+    background-color: aliceblue;
 }
