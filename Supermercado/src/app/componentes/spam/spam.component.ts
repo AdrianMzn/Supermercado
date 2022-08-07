@@ -10,6 +10,7 @@ import { ProductsService } from 'src/app/servicios/productos.service';
 })
 export class SpamComponent implements OnInit {
 
+  preferencia: string = ''
   productosSugeridos: Producto[] = []
   productosCarrito: Producto[] = []
  
@@ -30,6 +31,7 @@ export class SpamComponent implements OnInit {
         if (productos.length>=1){
           this.productosCarrito = productos
           const preferencia = this.analizarPreferencias(productos)
+          this.preferencia = preferencia
           this.prodService.getAll().subscribe((productos) => {
           const productosPreferidos = productos.filter(x => x.seccion == preferencia)
           this.productosSugeridos = productosPreferidos.slice(0,3)

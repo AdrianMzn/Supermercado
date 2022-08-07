@@ -117,19 +117,19 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 7,
-      "seccion": "pescado",
-      "nombre": "bonito",
-      "precio": 9.3,
-      "cantidad": 3,
+      "id": 4,
+      "seccion": "carnes",
+      "nombre": "chuleta",
+      "precio": 22.3,
+      "cantidad": 15,
       "cantidadMaxima": 20
     },
     {
-      "id": 2,
-      "seccion": "frutas",
-      "nombre": "melocoton",
-      "precio": 3.3,
-      "cantidad": 2,
+      "id": 5,
+      "seccion": "carnes",
+      "nombre": "jamon",
+      "precio": 27.3,
+      "cantidad": 15,
       "cantidadMaxima": 20
     }
   ]
