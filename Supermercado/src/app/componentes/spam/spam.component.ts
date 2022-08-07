@@ -28,21 +28,38 @@ export class SpamComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartService.getAll().subscribe((productos) => {
-        if (productos.length>=1){
-          this.productosCarrito = productos
-          const preferencia = this.analizarPreferencias(productos)
-          this.preferencia = preferencia
-          this.prodService.getAll().subscribe((productos) => {
-          const productosPreferidos = productos.filter(x => x.seccion == preferencia)
-          this.productosSugeridos = productosPreferidos.slice(0,3)
+      if (productos.length >= 1) {
+        this.productosCarrito = productos
+        const preferencia = this.analizarPreferencias(productos)
+        this.preferencia = preferencia
+        this.prodService.getAll().subscribe((productos) => {
+          const productosPreferidos =
+            productos
+              .filter(x => x.seccion == preferencia)
+              .filter(prod => !this.productosCarrito.find(producto => producto.id == prod.id))
+          this.productosSugeridos = productosPreferidos.slice(0, 3)
         })
-        }
-        
+      }
+
     })
   }
 
   addProducto(producto: Producto){
-    this.cartService.add(producto).subscribe((prod) => (this.productosCarrito.push(prod)))
+    this.cartService.getAll().subscribe((devuelveprod) => (this.productosCarrito = devuelveprod))
+    const productoExiste: Producto|undefined= this.productosCarrito.find(p => producto.nombre==p.nombre)
+    console.log(this.productosCarrito)
+    console.log(productoExiste)
+    if(productoExiste){
+      this.cartService.plusOne(productoExiste).subscribe((prodActual) => (
+        this.productosCarrito = this.productosCarrito.map(p1 => (prodActual.nombre==p1.nombre? prodActual: p1))
+      ))
+    }else{
+      const nuevoProducto={
+        ...producto,cantidad:1
+      }
+      this.cartService.add(nuevoProducto).subscribe((prod) => (this.productosCarrito.push(prod)))
+    }
+    this.ngOnInit()    
   }
 
   getColor(seccion: string){

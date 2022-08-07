@@ -387,6 +387,14 @@
       "precio": 22.3,
       "cantidad": 1,
       "cantidadMaxima": 20
+    },
+    {
+      "id": 23,
+      "seccion": "carnes",
+      "nombre": "morcilla de burgos",
+      "precio": 2.95,
+      "cantidad": 1,
+      "cantidadMaxima": 20
     }
   ]
 }
