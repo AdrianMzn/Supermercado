@@ -382,62 +382,6 @@
       "precio": 9.3,
       "cantidad": 1,
       "cantidadMaxima": 20
-    },
-    {
-      "id": 31,
-      "seccion": "pescado",
-      "nombre": "camarones",
-      "precio": 23.95,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 36,
-      "seccion": "pescado",
-      "nombre": "cabracho",
-      "precio": 27,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 39,
-      "seccion": "carnes",
-      "nombre": "torrezno de Soria",
-      "precio": 3.9,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 40,
-      "seccion": "panaderia",
-      "nombre": "pan tostado",
-      "precio": 2.15,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 37,
-      "seccion": "lacteos",
-      "nombre": "queso de cabra",
-      "precio": 2.85,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 8,
-      "seccion": "pescado",
-      "nombre": "emperador",
-      "precio": 8.3,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 10,
-      "seccion": "carnes",
-      "nombre": "salchichon ibérico",
-      "precio": 15.9,
-      "cantidad": 1,
-      "cantidadMaxima": 20
     }
   ]
 }

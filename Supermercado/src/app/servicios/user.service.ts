@@ -15,6 +15,10 @@ export class UserService {
     return this.http.get<User[]>(this.baseUrl)
   }
 
+  getUser(id: number){
+    return this.http.get<User>(`${this.baseUrl}/${id}`)
+  }
+
   post(user:User){
     return this.http.post<User>(this.baseUrl, user)
   }

@@ -44,8 +44,7 @@ export class ProductoComponent implements OnInit {
   addProducto(producto: Producto){
     this.cartService.getAll().subscribe((devuelveprod) => (this.productosCarrito = devuelveprod))
     const productoExiste: Producto|undefined= this.productosCarrito.find(p => producto.nombre==p.nombre)
-    console.log(this.productosCarrito)
-    console.log(productoExiste)
+
     if(productoExiste){
       this.cartService.plusOne(productoExiste).subscribe((prodActual) => (
         this.productosCarrito = this.productosCarrito.map(p1 => (prodActual.nombre==p1.nombre? prodActual: p1))
