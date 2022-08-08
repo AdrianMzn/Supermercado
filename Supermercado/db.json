@@ -2,35 +2,22 @@
   "users": [
     {
       "id": 0,
-      "username": "mock",
-      "name": "Mock",
-      "cart": [
+      "email": "mocktest@mock.com",
+      "carrito": [
         {
           "id": 0,
-          "productName": "milk",
-          "quantity": 1,
-          "price": 2.3
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
         }
       ]
     },
     {
       "id": 1,
-      "username": "mocky",
-      "name": "Mocky",
-      "cart": [
-        {
-          "id": 1,
-          "productName": "flour",
-          "quantity": 2,
-          "price": 2.5
-        },
-        {
-          "id": 2,
-          "productName": "bread",
-          "quantity": 5,
-          "price": 1.3
-        }
-      ]
+      "email": "mocktest2@mock.com",
+      "carrito": []
     }
   ],
   "products": [
@@ -369,7 +356,7 @@
       "seccion": "frutas",
       "nombre": "paraguaya",
       "precio": 2.5,
-      "cantidad": 2,
+      "cantidad": 3,
       "cantidadMaxima": 20
     },
     {
@@ -381,6 +368,14 @@
       "cantidadMaxima": 20
     },
     {
+      "id": 5,
+      "seccion": "carnes",
+      "nombre": "jamon",
+      "precio": 27.3,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
       "id": 7,
       "seccion": "pescado",
       "nombre": "bonito",
@@ -389,26 +384,58 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 21,
-      "seccion": "frutas",
-      "nombre": "tomate",
-      "precio": 3.35,
+      "id": 31,
+      "seccion": "pescado",
+      "nombre": "camarones",
+      "precio": 23.95,
       "cantidad": 1,
       "cantidadMaxima": 20
     },
     {
-      "id": 34,
-      "seccion": "frutas",
-      "nombre": "calabaza",
-      "precio": 2.7,
+      "id": 36,
+      "seccion": "pescado",
+      "nombre": "cabracho",
+      "precio": 27,
       "cantidad": 1,
       "cantidadMaxima": 20
     },
     {
-      "id": 35,
-      "seccion": "frutas",
-      "nombre": "naranjas",
-      "precio": 2.3,
+      "id": 39,
+      "seccion": "carnes",
+      "nombre": "torrezno de Soria",
+      "precio": 3.9,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 40,
+      "seccion": "panaderia",
+      "nombre": "pan tostado",
+      "precio": 2.15,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 37,
+      "seccion": "lacteos",
+      "nombre": "queso de cabra",
+      "precio": 2.85,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 8,
+      "seccion": "pescado",
+      "nombre": "emperador",
+      "precio": 8.3,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 10,
+      "seccion": "carnes",
+      "nombre": "salchichon ibérico",
+      "precio": 15.9,
       "cantidad": 1,
       "cantidadMaxima": 20
     }
