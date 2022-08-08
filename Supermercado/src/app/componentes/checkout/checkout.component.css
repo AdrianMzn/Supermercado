@@ -31,9 +31,41 @@ th {
     margin: 5px;
     padding: 10px;
     text-align: center;
-    width: 100px;
+    /* width: 100px; */
+}
+
+.prod_name {
+    text-align: justify;
+}
+
+.resumen_compra {
+    color: grey;
 }
 
 #checkoutButton, #cancelButton {
     margin: 0px 5px 0px 0px;
+    background-color: bisque;
+    border-style: none;
+    border-width: 5px;
+    color: grey;
+    height: 2.5rem;
+    width: 6rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#checkoutButton{
+    width: 12rem;
+}
+
+#checkoutButton:hover {
+    background-color: aliceblue;
+}
+
+#cancelButton:hover {
+    background-color: aliceblue;
+}
+
+h2, .precio_total {
+    color: grey;
 }
