@@ -385,7 +385,7 @@
       "seccion": "frutas",
       "nombre": "manzana",
       "precio": 3.3,
-      "cantidad": 3,
+      "cantidad": 4,
       "cantidadMaxima": 20
     },
     {
@@ -409,6 +409,14 @@
       "seccion": "frutas",
       "nombre": "calabaza",
       "precio": 2.7,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 35,
+      "seccion": "frutas",
+      "nombre": "naranjas",
+      "precio": 2.3,
       "cantidad": 1,
       "cantidadMaxima": 20
     }

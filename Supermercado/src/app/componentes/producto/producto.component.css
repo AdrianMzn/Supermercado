@@ -30,3 +30,22 @@
     text-align: center;
     margin: 20px 0px 0px 0px;
 }
+
+#addProduct {
+    background-color: bisque;
+    border-style: none;
+    border-width: 1px;
+    color: grey;
+    height: 3rem;
+    width: 60%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#addProduct:hover {
+    background-color: aliceblue;
+}
+
+h2 {
+    color: grey;
+}
