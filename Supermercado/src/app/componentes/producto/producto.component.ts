@@ -8,11 +8,13 @@ import { CartService } from 'src/app/servicios/carrito.service';
   templateUrl: './producto.component.html',
   styleUrls: ['./producto.component.css']
 })
+
 export class ProductoComponent implements OnInit {
   productos: Producto[] = [];
   categorias: string[] = [];
   productosCarrito: Producto[] = [];
   orderTypeValue: string = "";
+  searchFilter: string = ''
 
 
   constructor(private prodService: ProductsService, private cartService: CartService) { }

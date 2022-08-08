@@ -16,6 +16,8 @@ import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { SpamComponent } from './componentes/spam/spam.component';
 import { CheckoutComponent } from './componentes/checkout/checkout.component';
+import { ProductoPipe } from './componentes/producto/producto.pipe';
+import { FormsModule } from '@angular/forms';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -44,11 +46,13 @@ const misRutas: Routes = [
     HomeComponent,
     LoginComponent,
     SpamComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductoPipe
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(misRutas),HttpClientModule
+    RouterModule.forRoot(misRutas),
+    HttpClientModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
