@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { SpamComponent } from './componentes/spam/spam.component';
+import { CheckoutComponent } from './componentes/checkout/checkout.component';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -24,6 +25,7 @@ const misRutas: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'carrito', component: CarritoComponent },
   { path: 'productos', component: ProductoComponent },
+  { path: 'checkout', component: CheckoutComponent},
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},  // si no hay ruta va a home
 ];

@@ -365,14 +365,6 @@
   ],
   "addedProducts": [
     {
-      "id": 0,
-      "seccion": "frutas",
-      "nombre": "manzana",
-      "precio": 2.3,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
       "id": 17,
       "seccion": "panaderia",
       "nombre": "baguette",
@@ -381,18 +373,10 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 16,
-      "seccion": "panaderia",
-      "nombre": "empanada",
-      "precio": 4.5,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 29,
-      "seccion": "lacteos",
-      "nombre": "Torta del casar queso",
-      "precio": 2.4,
+      "id": 1,
+      "seccion": "frutas",
+      "nombre": "paraguaya",
+      "precio": 2.5,
       "cantidad": 1,
       "cantidadMaxima": 20
     }

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { Producto } from 'src/app/models/producto.model';
 import { CartService } from 'src/app/servicios/carrito.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -13,7 +14,7 @@ export class CarritoComponent implements OnInit {
   totalPrice: number = 0
   getTotalPrice(array: Producto[]):number {return Math.round(array.reduce((acc, prod) => (acc + prod.precio * prod.cantidad), 0) * 100) / 100;}
 
-  constructor(private cartService: CartService) { 
+  constructor(private cartService: CartService, private router: Router) { 
   }
   
   ngOnInit(): void {
@@ -30,7 +31,6 @@ export class CarritoComponent implements OnInit {
     })
   }
   removeProduct(product: Producto){
-    console.log(product)
     this.cartService
       .delete(product)
       .subscribe((products) => {
@@ -55,6 +55,10 @@ export class CarritoComponent implements OnInit {
       this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))
       this.totalPrice = this.getTotalPrice(this.addedProducts)
     })
+  }
+
+  placeOrder(){
+    this.router.navigateByUrl('checkout')
   }
 
 }

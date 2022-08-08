@@ -16,9 +16,10 @@
     margin-right: auto;
  } */
  #shoppingCart tr:first-child, #shoppingCart tr:nth-child(2){
-     background-color: blue;
-     color: yellow;
+     background-color: bisque;
+     color: white;
      font-weight: bold;
+     text-shadow: -0.75px 0 black, 0 0.75px black, 0.75px 0 black, 0 -0.75px black;
  }
 
 
@@ -28,3 +29,9 @@ tr, td, th {
     padding: 10px;
     text-align: center;
 } 
+
+#placeOrder{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 5px;
+}

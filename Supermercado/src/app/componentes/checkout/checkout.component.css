@@ -1,0 +1,10 @@
+#checkoutForm{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: 10px;
+}
+#checkoutForm div{
+    margin: 10px;
+    padding: 5px;
+}
