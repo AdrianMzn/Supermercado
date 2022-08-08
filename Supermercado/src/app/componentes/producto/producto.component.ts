@@ -142,22 +142,18 @@ export class ProductoComponent implements OnInit {
     console.log(this.orderTypeValue)
     switch (this.orderTypeValue) {
       case 'alfabeticamente':
-        console.log("1")
         productosFilted = productosFilted.sort( this.compareAlf );
         break;
 
       case 'precioMin':
-        console.log("2")
         productosFilted = productosFilted.sort( this.comparePrecMin );
         break;
 
       case 'precioMax':
-        console.log("3")
         productosFilted = productosFilted.sort( this.comparePrecMax );
         break;
 
       case 'porCategoria':
-        console.log("4")
         productosFilted = productosFilted.sort( this.compareCat );
         break;
 
@@ -189,6 +185,7 @@ export class ProductoComponent implements OnInit {
 
       let productoHTML = 
                 "<h2>" + producto.nombre +"</h2>" +
+                "<img id='imgProducto' style='width: 250px; height: 250px;' src='assets/" + producto.seccion + ".jpg'/>" +
                 "<div>" +
                     "Identificador: " + producto.id +
                 "</div>" +
