@@ -43,7 +43,7 @@
                     <ul id="navlist" class="center listaUser">
                       <li *ngIf="logueado" > {{nombreUsuario}}   <!-- </li> style="text-decoration: underline black;" -->
                       <li *ngIf="logueado" ><button class="nav-link" class="btn_sesion" routerLink="login" (click)=" logOut()">Log Out</button></li>
-                      <li *ngIf="!logueado" class="optionUser"><button class="nav-link" class="btn_sesion" routerLink="login" (click)="logueado=true">Log In</button></li>
+                      <li *ngIf="!logueado" class="optionUser"><button class="nav-link" class="btn_sesion" routerLink="login">Log In</button></li>
                     </ul>
                   </div>
                 </li>

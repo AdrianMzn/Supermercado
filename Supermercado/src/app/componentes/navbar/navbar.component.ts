@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/servicios/login.service';
 
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,13 +9,19 @@ import { LoginService } from 'src/app/servicios/login.service';
 })
 export class NavbarComponent implements OnInit {
 
-  nombreUsuario: string = "Jose";
+  nombreUsuario: string | null | undefined = "";
   logueado: boolean = false;
   email: string = "";
 
   constructor(private loginService: LoginService) {}
 
   ngOnInit(): void {
+    this.loginService.comprobar().subscribe(data => {
+      this.nombreUsuario = data?.email
+      if (data) {
+        this.logueado = true
+      }
+    })
   }
 
   // isLogged() {
@@ -25,8 +32,8 @@ export class NavbarComponent implements OnInit {
 
   logOut() {
     this.loginService.logout().then((data) => {
-      alert('el usuario es: ' + this.email);
-      alert('Sesión cerrada');
+      /* alert('el usuario es: ' + this.nombreUsuario);
+      alert('Sesión cerrada'); */
       this.logueado = false;
     }, (error) => {
       console.log(error);
