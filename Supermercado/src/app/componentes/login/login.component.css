@@ -4,7 +4,7 @@ h1 {
     color: grey;
 }
 
-#userId, #userPw {
+#userId, #userPw, #firstName, #lastName, #mail, #street, #city, #province, #country, #id, #phoneNumber, #password, #passwordValidation{
     width: 22rem;
     height: 2.5rem;
     border-color: bisque;
