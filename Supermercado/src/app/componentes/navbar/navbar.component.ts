@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,21 +9,32 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   nombreUsuario: string = "Jose";
-  logeado: boolean = true;
-  
-  constructor() { 
+  logueado: boolean = false;
+  email: string = "";
 
-  }
+  constructor(private loginService: LoginService) {}
 
   ngOnInit(): void {
   }
 
-  isLogged(){
+  // isLogged() {
 
-    return this.logeado;
+
+  //   return this.logueado;
+  // }
+
+  logOut() {
+    this.loginService.logout().then((data) => {
+      alert('el usuario es: ' + this.email);
+      alert('Sesión cerrada');
+      this.logueado = false;
+    }, (error) => {
+      console.log(error);
+      alert('No se pudo cerrar la sesión');
+    });
   }
 
-  routerLinkTo(component: string){
+  routerLinkTo(component: string) {
 
   }
 }

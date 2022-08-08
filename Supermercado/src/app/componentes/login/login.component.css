@@ -51,6 +51,25 @@ label {
     font-weight: bold;
 }
 
+#btn_registro {
+    margin-top: 20px;
+}
+
 .btn_login:hover {
     background-color: aliceblue;
+}
+
+.btn_enlace {
+    border-style: none;
+    text-decoration: underline;
+    background-color: white;
+    color: grey;
+}
+
+.btn_enlace:hover {
+    color: black;
+}
+
+.container {
+    margin-top: 1rem;
 }

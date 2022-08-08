@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,14 +8,58 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
+  logueado: boolean = false;
+  registro: boolean = false;
+  email: string = '';
+  password: string = '';
+  confirmPassword: string = '';
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
+  constructor(private router: Router, private loginService: LoginService) { }
+  
+  iniciarSesion() {
+    this.loginService.login(this.email, this.password).then(
+      (data) => {
+        console.log('Sesión iniciada');
+        this.logueado = true;
+        this.router.navigateByUrl('carrito');
+      },
+      (error) => {
+        console.log(error);
+        alert('Usuario no encontrado');
+      }
+    );
   }
 
-  iniciarSesion(): void {
-    this.router.navigateByUrl('carrito');
+  registrar() {
+    if (this.password == this.confirmPassword) {
+      this.loginService.registro(this.email, this.password).then(
+        (data) => {
+          alert('Usuario registrado');
+          this.router.navigateByUrl('carrito');
+        },
+        (error) => {
+          console.log(error); // tb error.message
+          alert('Usuario no registrado');
+        }
+      );
+    } else {
+      alert('El password y la confirmación no coinciden');
+    }
+  }
+
+  logOut(){
+    this.loginService.logout().then((data) => {
+        alert('Sesión cerrada');
+        this.logueado = false;
+      }, (error) => {
+        console.log(error);
+        alert('No se pudo cerrar la sesión');
+      }
+    );
+  }
+
+  ngOnInit(): void {
   }
 
 }

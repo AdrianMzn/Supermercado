@@ -41,9 +41,9 @@
                   <a><img src="assets\user.png" alt="" style="width: 30px"></a>
                   <div class="submenu container">
                     <ul id="navlist" class="center listaUser">
-                      <li style="text-decoration: underline black;" *ngIf="isLogged()">{{nombreUsuario}}</li>
-                      <li *ngIf="isLogged()" ><a class="nav-link" routerLink="login">Log Out</a></li>
-                      <li *ngIf="!isLogged()" class="optionUser"><a class="nav-link" routerLink="login">Log In</a></li>
+                      <li *ngIf="logueado" > {{nombreUsuario}}   <!-- </li> style="text-decoration: underline black;" -->
+                      <li *ngIf="logueado" ><button class="nav-link" class="btn_sesion" routerLink="login" (click)=" logOut()">Log Out</button></li>
+                      <li *ngIf="!logueado" class="optionUser"><button class="nav-link" class="btn_sesion" routerLink="login" (click)="logueado=true">Log In</button></li>
                     </ul>
                   </div>
                 </li>

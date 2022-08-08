@@ -17,8 +17,11 @@ import { LoginComponent } from './componentes/login/login.component';
 import { SpamComponent } from './componentes/spam/spam.component';
 import { CheckoutComponent } from './componentes/checkout/checkout.component';
 import { ProductoPipe } from './componentes/producto/producto.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -54,9 +57,13 @@ const misRutas: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(misRutas),
-    HttpClientModule, FormsModule
+    HttpClientModule, 
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AngularFireAuthModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

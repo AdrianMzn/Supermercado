@@ -17,7 +17,6 @@
 
 nav ul li:hover .submenu{
     display: block;
-    
 }
 
 .center {
@@ -38,4 +37,15 @@ nav ul li:hover .submenu{
 }
 
  li:hover { background-color: bisque}  /*#2EA620; */
+
+ .btn_sesion {
+    border-style: none;
+    text-decoration: underline;
+    background-color: aliceblue;
+    color: grey;
+}
+
+.btn_sesion:hover{
+    background-color: bisque;
+}
 
