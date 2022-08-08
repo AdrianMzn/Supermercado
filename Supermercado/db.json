@@ -365,14 +365,6 @@
   ],
   "addedProducts": [
     {
-      "id": 17,
-      "seccion": "panaderia",
-      "nombre": "baguette",
-      "precio": 0.5,
-      "cantidad": 3,
-      "cantidadMaxima": 20
-    },
-    {
       "id": 1,
       "seccion": "frutas",
       "nombre": "paraguaya",
