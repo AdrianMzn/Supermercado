@@ -1,12 +1,14 @@
-.shoppingCart{
+.shoppingCart {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;    
+    align-items: center;
 }
-#shoppingCart{
+
+#shoppingCart {
     max-width: 500px;
     margin: 20px;
 }
+
 /* caption {
     background-color: rgb(37, 0, 247);
     color: yellow;
@@ -15,23 +17,42 @@
     margin-left: auto;
     margin-right: auto;
  } */
- #shoppingCart tr:first-child, #shoppingCart tr:nth-child(2){
-     background-color: bisque;
-     color: white;
-     font-weight: bold;
-     text-shadow: -0.75px 0 black, 0 0.75px black, 0.75px 0 black, 0 -0.75px black;
- }
+#shoppingCart tr:first-child,
+#shoppingCart tr:nth-child(2) {
+    background-color: bisque;
+    color: white;
+    font-weight: bold;
+    text-shadow: -0.75px 0 grey, 0 0.75px grey, 0.75px 0 grey, 0 -0.75px grey;
+}
 
 
-tr, td, th {
+tr,
+td,
+th {
     border: 1px solid black;
     margin: 5px;
     padding: 10px;
     text-align: center;
-} 
+}
 
-#placeOrder{
+#placeOrder {
     margin-top: 10px;
     margin-bottom: 25px;
     padding: 5px;
+    background-color: bisque;
+    border-style: none;
+    border-width: 5px;
+    color: grey;
+    height: 2.5rem;
+    width: 21rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#placeOrder:hover {
+    background-color: aliceblue;
+}
+
+.precio_total{
+    color: grey;
 }

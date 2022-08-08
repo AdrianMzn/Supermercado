@@ -369,7 +369,7 @@
       "seccion": "panaderia",
       "nombre": "baguette",
       "precio": 0.5,
-      "cantidad": 4,
+      "cantidad": 3,
       "cantidadMaxima": 20
     },
     {
@@ -385,7 +385,31 @@
       "seccion": "frutas",
       "nombre": "manzana",
       "precio": 3.3,
-      "cantidad": 4,
+      "cantidad": 3,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 7,
+      "seccion": "pescado",
+      "nombre": "bonito",
+      "precio": 9.3,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 21,
+      "seccion": "frutas",
+      "nombre": "tomate",
+      "precio": 3.35,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 34,
+      "seccion": "frutas",
+      "nombre": "calabaza",
+      "precio": 2.7,
+      "cantidad": 1,
       "cantidadMaxima": 20
     }
   ]

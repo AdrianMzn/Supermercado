@@ -15,19 +15,26 @@
         <div>
             <input type='text' name="email" placeholder="Email" />
         </div>
-        <input type="submit" value="Checkout" id="checkoutButton" />
         <input type="reset" value="Cancelar" id="cancelButton" (click)="returnHome()" />
+        <input type="submit" value="Confirm & checkout" id="checkoutButton" />
     </form>
+
+    <h2>Resumen de tu pedido:</h2>
 
     <div>
         <table id="checkoutCart">
+            <tr class="resumen_compra">
+                <th>Producto</th>
+                <th>Precio (unidad)</th>
+                <th>Cantidad</th>
+            </tr>
             <tr *ngFor="let prod of productosCarrito">
-                <td>{{prod.nombre}}</td>
+                <td class="prod_name">{{prod.nombre}}</td>
                 <td>{{prod.precio}}€</td>
                 <td>{{prod.cantidad}} </td>
             </tr>
             <tr>
-                <th colspan="4">Total: {{totalPrice}}€</th>
+                <th colspan="4" class="precio_total">Total: {{totalPrice}}€</th>
             </tr>
         </table>
     </div>
