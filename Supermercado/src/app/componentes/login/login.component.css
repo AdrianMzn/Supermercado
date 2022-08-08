@@ -8,7 +8,7 @@ h1 {
     width: 22rem;
     height: 2.5rem;
     border-color: bisque;
-    border-width: 3px;
+    border-width: 2px;
     border-style: solid;
 }
 
@@ -46,7 +46,9 @@ label {
     background-color: bisque;
     border-style: none;
     border-width: 5px;
+    border-radius: 10px;
     color: grey;
+    font-weight: bold;
 }
 
 .btn_login:hover {
