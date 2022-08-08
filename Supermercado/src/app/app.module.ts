@@ -44,6 +44,7 @@ const misRutas: Routes = [
     HomeComponent,
     LoginComponent,
     SpamComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

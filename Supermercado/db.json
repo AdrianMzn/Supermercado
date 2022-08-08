@@ -369,7 +369,7 @@
       "seccion": "panaderia",
       "nombre": "baguette",
       "precio": 0.5,
-      "cantidad": 1,
+      "cantidad": 4,
       "cantidadMaxima": 20
     },
     {
@@ -377,7 +377,15 @@
       "seccion": "frutas",
       "nombre": "paraguaya",
       "precio": 2.5,
-      "cantidad": 1,
+      "cantidad": 2,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 2,
+      "seccion": "frutas",
+      "nombre": "manzana",
+      "precio": 3.3,
+      "cantidad": 4,
       "cantidadMaxima": 20
     }
   ]

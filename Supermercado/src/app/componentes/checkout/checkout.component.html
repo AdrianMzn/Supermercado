@@ -1,17 +1,34 @@
 <div  id="checkoutForm">
     <form (ngSubmit)="onSubmit()">
         <div>
-            <label>Nombre</label><input type='text' name="nombre"/>
+            <input type='text' name="apellidos" placeholder="Nombre" />
         </div>
         <div>
-            <label>Apellidos</label><input type='password' name="apellidos" />
+            <input type='text' name="apellidos" placeholder="Apellidos" />
         </div>
         <div>
-            <label>Direccion</label><input type='text' name="direccion"  />
+            <input type='text' name="direccion"  placeholder="Direccion" />
         </div>
         <div>
-            <label>Teléfono</label><input type='text' name="telefono" />
+            <input type='text' name="telefono" placeholder="Telefono" />
+        </div>
+        <div>
+            <input type='text' name="email" placeholder="Email" />
         </div>
         <input type="submit" value="Checkout" id="checkoutButton" />
+        <input type="reset" value="Cancelar" id="cancelButton" (click)="returnHome()" />
     </form>
+
+    <div>
+        <table id="checkoutCart">
+            <tr *ngFor="let prod of productosCarrito">
+                <td>{{prod.nombre}}</td>
+                <td>{{prod.precio}}€</td>
+                <td>{{prod.cantidad}} </td>
+            </tr>
+            <tr>
+                <th colspan="4">Total: {{totalPrice}}€</th>
+            </tr>
+        </table>
+    </div>
 </div>

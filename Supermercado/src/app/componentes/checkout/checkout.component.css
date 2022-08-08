@@ -1,10 +1,39 @@
-#checkoutForm{
+#checkoutForm {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
+    align-items: center;
     text-align: center;
     margin: 10px;
 }
-#checkoutForm div{
+
+#checkoutForm div {
     margin: 10px;
     padding: 5px;
+}
+
+form {
+    margin: 0.75em;
+    padding: 0.75em;
+    display: inline-block;
+    text-align: center;
+}
+
+table {
+    max-width: 500px;
+    margin: 0px;
+    padding: 0px;
+}
+
+tr,
+td,
+th {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+}
+
+#checkoutButton, #cancelButton {
+    margin: 0px 5px 0px 0px;
 }
