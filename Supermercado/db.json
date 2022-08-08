@@ -373,26 +373,26 @@
       "cantidadMaxima": 20
     },
     {
-      "id": 5,
-      "seccion": "carnes",
-      "nombre": "jamon",
-      "precio": 27.3,
-      "cantidad": 2,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 4,
-      "seccion": "carnes",
-      "nombre": "chuletón tomahawk",
-      "precio": 22.3,
+      "id": 17,
+      "seccion": "panaderia",
+      "nombre": "baguette",
+      "precio": 0.5,
       "cantidad": 1,
       "cantidadMaxima": 20
     },
     {
-      "id": 23,
-      "seccion": "carnes",
-      "nombre": "morcilla de burgos",
-      "precio": 2.95,
+      "id": 16,
+      "seccion": "panaderia",
+      "nombre": "empanada",
+      "precio": 4.5,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 29,
+      "seccion": "lacteos",
+      "nombre": "Torta del casar queso",
+      "precio": 2.4,
       "cantidad": 1,
       "cantidadMaxima": 20
     }
