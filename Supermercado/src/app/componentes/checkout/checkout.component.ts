@@ -18,16 +18,16 @@ export class CheckoutComponent implements OnInit {
   productosCarrito: Producto[] = []
   totalPrice: number = 0
   loggedUser: string | null | undefined = ''
-  getTotalPrice(array: Producto[]):number {return Math.round(array.reduce((acc, prod) => (acc + prod.precio * prod.cantidad), 0) * 100) / 100;}
+  getTotalPrice(array: Producto[]): number { return Math.round(array.reduce((acc, prod) => (acc + prod.precio * prod.cantidad), 0) * 100) / 100; }
 
 
-  constructor(private router: Router, private cartService: CartService, private loginService:LoginService) { }
+  constructor(private router: Router, private cartService: CartService, private loginService: LoginService) { }
 
   ngOnInit(): void {
     this.loginService.comprobar().subscribe(data => {
       this.loggedUser = data?.email
 
-      if (this.loggedUser){
+      if (this.loggedUser) {
         this.cartService.getAllFromUser().subscribe(users => {
           let user = users.find(user => user.email == this.loggedUser)
           let userID = user ? user.id : 0
@@ -40,18 +40,21 @@ export class CheckoutComponent implements OnInit {
           this.totalPrice = this.getTotalPrice(this.productosCarrito)
         })
       }
-    
-    
+
     })
-    
-    
+
+
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log('submitted')
   }
 
-  returnHome(){
+  returnHome() {
     this.router.navigateByUrl('')
+  }
+
+  confirmarPedido() {
+    alert('Confirmación de compra. Su pedido ha sido procesado con éxito.');
   }
 }

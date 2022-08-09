@@ -24,6 +24,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { CategoryProductPipe } from './componentes/producto/category-product.pipe';
 import { OrderProductPipe } from './componentes/producto/order-product.pipe';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -34,6 +35,7 @@ const misRutas: Routes = [
   { path: 'carrito', component: CarritoComponent },
   { path: 'productos', component: ProductoComponent },
   { path: 'checkout', component: CheckoutComponent},
+  { path: 'contacto', component: ContactoComponent},
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},  // si no hay ruta va a home
 ];
@@ -56,7 +58,8 @@ const misRutas: Routes = [
     ProductoPipe,
     FooterComponent,
     CategoryProductPipe,
-    OrderProductPipe
+    OrderProductPipe,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
