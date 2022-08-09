@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       },
       (error) => {
         console.log(error);
-        alert('Usuario no encontrado');
+        alert('No se ha podido iniciar sesión. Compruebe los datos introducidos.');
       }
     );
   }
@@ -35,12 +35,12 @@ export class LoginComponent implements OnInit {
     if (this.password == this.confirmPassword) {
       this.loginService.registro(this.email, this.password).then(
         (data) => {
-          alert('Usuario registrado');
+          // alert('Usuario registrado');
           this.router.navigateByUrl('productos');
         },
         (error) => {
           console.log(error); // tb error.message
-          alert('No se ha podido iniciar sesión. Compruebe los datos introducidos.');
+          alert('No se ha podido hacer el registro. Compruebe los datos introducidos.');
         }
       );
     } else {
@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
 
   logOut(){
     this.loginService.logout().then((data) => {
-        alert('Sesión cerrada');
+        // alert('Sesión cerrada');
         this.logueado = false;
       }, (error) => {
         console.log(error);
