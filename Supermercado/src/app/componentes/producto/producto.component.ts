@@ -3,6 +3,7 @@ import { Producto } from '../../models/producto.model';
 import { ProductsService } from 'src/app/servicios/productos.service';
 import { CartService } from 'src/app/servicios/carrito.service';
 import { LoginService } from 'src/app/servicios/login.service';
+import { UserService } from 'src/app/servicios/user.service';
 
 @Component({
   selector: 'app-producto',
@@ -19,7 +20,7 @@ export class ProductoComponent implements OnInit {
   loggedUser: string | null | undefined = ''
 
 
-  constructor(private prodService: ProductsService, private cartService: CartService, private loginService:LoginService) { }
+  constructor(private prodService: ProductsService, private cartService: CartService, private loginService:LoginService, private userService: UserService) { }
 
   ngOnInit(): void {
     this.prodService.getAll().subscribe((productos) => {
@@ -44,29 +45,49 @@ export class ProductoComponent implements OnInit {
 
   
   addProducto(producto: Producto){
-    this.loginService.comprobar().subscribe(data => this.loggedUser = data?.email)
-    if (this.loggedUser){
-      this.cartService.getAllFromUser().subscribe(users => {
-        let user = users.find(user => user.email == this.loggedUser)
-        let userID = user ? user.id : 0
-        this.productosCarrito = users[userID].carrito
-      })
-     } else {
-      this.cartService.getAllFromGuest().subscribe((devuelveprod) => (this.productosCarrito = devuelveprod))
-    }
-    
-    const productoExiste: Producto|undefined= this.productosCarrito.find(p => producto.nombre==p.nombre)
+    this.loginService.comprobar().subscribe(data => {
+      this.loggedUser = data?.email
 
-    if(productoExiste){
-      this.cartService.plusOne(productoExiste).subscribe((prodActual) => (
-        this.productosCarrito = this.productosCarrito.map(p1 => (prodActual.nombre==p1.nombre? prodActual: p1))
-      ))
-    }else{
-      const nuevoProducto={
-        ...producto,cantidad:1
+      if (this.loggedUser){
+        this.cartService.getAllFromUser().subscribe(users => {
+          let user = users.find(user => user.email == this.loggedUser)
+          let userID = user ? user.id : 0
+          this.productosCarrito = users[userID].carrito
+  
+          const productoExiste: Producto | undefined = this.productosCarrito.find(p => producto.nombre == p.nombre)
+  
+          if (productoExiste) {
+            const updatedProduct = { ...productoExiste, cantidad: productoExiste.cantidad + 1 }
+            user!.carrito = user!.carrito.map(prod => prod.id == updatedProduct.id ? updatedProduct : prod)
+            this.productosCarrito = this.productosCarrito.map(p1 => (updatedProduct.nombre == p1.nombre ? updatedProduct : p1))
+            this.userService.put(user!).subscribe((user) => (console.log(user)))
+            
+          } else {
+            const nuevoProducto = {
+              ...producto, cantidad: 1
+            }
+            user!.carrito.push(nuevoProducto)
+            this.cartService.addToUser(user!).subscribe((user) => (console.log(user)))
+            
+          }
+        })
+       } else {
+        this.cartService.getAllFromGuest().subscribe((devuelveprod) => (this.productosCarrito = devuelveprod))
+  
+        const productoExiste: Producto|undefined= this.productosCarrito.find(p => producto.nombre==p.nombre)
+  
+      if(productoExiste){
+        this.cartService.plusOne(productoExiste).subscribe((prodActual) => (
+          this.productosCarrito = this.productosCarrito.map(p1 => (prodActual.nombre==p1.nombre? prodActual: p1))
+        ))
+      }else{
+        const nuevoProducto={
+          ...producto,cantidad:1
+        }
+        this.cartService.add(nuevoProducto).subscribe((prod) => (this.productosCarrito.push(prod)))
+      }  
       }
-      this.cartService.add(nuevoProducto).subscribe((prod) => (this.productosCarrito.push(prod)))
-    }  
+    })
   }
 
 /*   addProductoID(productoId: number){
