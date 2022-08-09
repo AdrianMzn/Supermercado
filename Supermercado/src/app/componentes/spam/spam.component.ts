@@ -3,6 +3,7 @@ import { Producto } from 'src/app/models/producto.model';
 import { CartService } from 'src/app/servicios/carrito.service';
 import { ProductsService } from 'src/app/servicios/productos.service';
 import { LoginService } from 'src/app/servicios/login.service';
+import { UserService } from 'src/app/servicios/user.service';
 
 @Component({
   selector: 'app-spam',
@@ -26,7 +27,7 @@ export class SpamComponent implements OnInit {
     return preferencia
   }
 
-  constructor(private cartService: CartService, private prodService: ProductsService, private loginService: LoginService) { }
+  constructor(private cartService: CartService, private prodService: ProductsService, private loginService: LoginService, private userService: UserService) { }
 
  /*  ngOnInit(): void {
     this.cartService.getAll().subscribe((productos) => {
@@ -97,7 +98,7 @@ export class SpamComponent implements OnInit {
           const updatedProduct = { ...productoExiste, cantidad: productoExiste.cantidad + 1 }
           user!.carrito = user!.carrito.map(prod => prod.id == updatedProduct.id ? updatedProduct : prod)
           this.productosCarrito = this.productosCarrito.map(p1 => (updatedProduct.nombre == p1.nombre ? updatedProduct : p1))
-          this.cartService.plusOneToUser(user!).subscribe((user) => (console.log(user)))
+          this.userService.put(user!).subscribe((user) => (console.log(user)))
           
         } else {
           const nuevoProducto = {

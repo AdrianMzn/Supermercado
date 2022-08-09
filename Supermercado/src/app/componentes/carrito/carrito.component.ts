@@ -79,22 +79,69 @@ export class CarritoComponent implements OnInit {
     })
 }
 
-  increaseQuantity(product:Producto){
-    this.cartService
-    .plusOne(product)
-    .subscribe((product) => {
-      this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))
-      this.totalPrice = this.getTotalPrice(this.addedProducts)
+  increaseQuantity(product: Producto) {
+
+    this.loginService.comprobar().subscribe(data => {
+      this.loggedUser = data?.email
+
+      if (this.loggedUser) {
+        this.cartService.getAllFromUser().subscribe(users => {
+          let user = users.find(user => user.email == this.loggedUser)
+          let userID = user ? user.id : 0
+          this.addedProducts = users[userID].carrito
+          const newProduct = { ...product, cantidad: product.cantidad + 1 }
+          user!.carrito = user!.carrito.map(prod => prod.id == product.id ? newProduct : prod)
+          this.userService.put(user!).subscribe(user => console.log(user))
+          this.addedProducts = this.addedProducts.map(prod => prod.id == product.id ? newProduct : prod)
+          this.totalPrice = this.getTotalPrice(this.addedProducts)
+
+        })
+      } else {
+      this.cartService
+        .plusOne(product)
+        .subscribe((product) => {
+          this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))
+          this.totalPrice = this.getTotalPrice(this.addedProducts)
+        })
+    }
     })
-  }
+  }    
 
   decreaseQuantity(product:Producto){
-    this.cartService
-    .minusOne(product)
-    .subscribe((product) => {
-      this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))
-      this.totalPrice = this.getTotalPrice(this.addedProducts)
+
+    this.loginService.comprobar().subscribe(data => {
+      this.loggedUser = data?.email
+
+      if (this.loggedUser) {
+        this.cartService.getAllFromUser().subscribe(users => {
+          let user = users.find(user => user.email == this.loggedUser)
+          let userID = user ? user.id : 0
+          this.addedProducts = users[userID].carrito
+          const newProduct = { ...product, cantidad: product.cantidad - 1 }
+          if (newProduct.cantidad == 0) {
+            user!.carrito = user!.carrito.filter(prod => prod.id != product.id)
+            
+          } else {
+            
+            user!.carrito = user!.carrito.map(prod => prod.id == product.id ? newProduct : prod)
+          }
+          this.userService.put(user!).subscribe(user => console.log(user))
+          this.addedProducts = this.addedProducts.map(prod => prod.id == product.id ? newProduct : prod)
+          this.totalPrice = this.getTotalPrice(this.addedProducts)
+
+        })
+      } else {
+        this.cartService
+        .minusOne(product)
+        .subscribe((product) => {
+          this.addedProducts = this.addedProducts.map((prod) => (prod.id === product.id ? product : prod))
+          this.totalPrice = this.getTotalPrice(this.addedProducts)
+        })
+    
+    }
     })
+
+
   }
 
   placeOrder(){

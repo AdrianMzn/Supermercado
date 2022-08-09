@@ -5,18 +5,18 @@
       "email": "mocktest@mock.com",
       "carrito": [
         {
-          "id": 0,
-          "seccion": "frutas",
-          "nombre": "naranjas",
-          "precio": 2.3,
-          "cantidad": 1,
-          "cantidadMaxima": 20
-        },
-        {
           "id": 6,
           "seccion": "carnes",
           "nombre": "mortadela",
           "precio": 12.3,
+          "cantidad": 4,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 10,
+          "seccion": "carnes",
+          "nombre": "salchichon ibérico",
+          "precio": 15.9,
           "cantidad": 1,
           "cantidadMaxima": 20
         }
@@ -96,6 +96,292 @@
           "nombre": "naranjas",
           "precio": 2.3,
           "cantidad": 1,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 4,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 3,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 3,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 3,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 3,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 0,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 3,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 4,
           "cantidadMaxima": 20
         }
       ]
@@ -437,7 +723,7 @@
       "seccion": "carnes",
       "nombre": "chuletón tomahawk",
       "precio": 22.3,
-      "cantidad": 7,
+      "cantidad": 8,
       "cantidadMaxima": 20
     }
   ]

@@ -90,11 +90,6 @@ export class CartService {
     return this.http.put<Producto>(urlToUpdate, updatedProduct)
   }
 
-  plusOneToUser(user: User): Observable<User> {
-    const urlToUpdate = `${this.userBaseUrl}/${user.id}`
-    return this.http.put<User>(urlToUpdate, user)
-  }
-
   minusOne(product: Producto): Observable<Producto>{
     const urlToUpdate = `${this.baseUrl}/${product.id}`
     const updatedProduct = {...product, cantidad: product.cantidad-=1}
