@@ -11,6 +11,14 @@
           "precio": 2.3,
           "cantidad": 1,
           "cantidadMaxima": 20
+        },
+        {
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
         }
       ]
     },
@@ -23,6 +31,70 @@
           "seccion": "carnes",
           "nombre": "mortadela",
           "precio": 12.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 10,
+          "seccion": "carnes",
+          "nombre": "salchichon ibérico",
+          "precio": 15.9,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "email": "mocktest@mock.com",
+      "carrito": [
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
           "cantidad": 1,
           "cantidadMaxima": 20
         }
@@ -366,22 +438,6 @@
       "nombre": "chuletón tomahawk",
       "precio": 22.3,
       "cantidad": 7,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 6,
-      "seccion": "carnes",
-      "nombre": "mortadela",
-      "precio": 12.3,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 22,
-      "seccion": "carnes",
-      "nombre": "picada de ternera",
-      "precio": 5.87,
-      "cantidad": 1,
       "cantidadMaxima": 20
     }
   ]

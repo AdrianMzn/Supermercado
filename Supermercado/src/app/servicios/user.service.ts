@@ -23,4 +23,9 @@ export class UserService {
     return this.http.post<User>(this.baseUrl, user)
   }
 
+  put(user:User){
+    const urlToUpdate = `${this.baseUrl}/${user.id}`
+    return this.http.post<User>(this.baseUrl, user)
+  }
+
 }

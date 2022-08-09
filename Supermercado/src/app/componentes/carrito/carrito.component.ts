@@ -4,6 +4,7 @@ import { CartService } from 'src/app/servicios/carrito.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/User';
 import { LoginService } from 'src/app/servicios/login.service';
+import { UserService } from 'src/app/servicios/user.service';
 
 @Component({
   selector: 'app-carrito',
@@ -17,7 +18,7 @@ export class CarritoComponent implements OnInit {
   totalPrice: number = 0
   getTotalPrice(array: Producto[]):number {return Math.round(array.reduce((acc, prod) => (acc + prod.precio * prod.cantidad), 0) * 100) / 100;}
 
-  constructor(private cartService: CartService, private router: Router, private loginService: LoginService) { 
+  constructor(private cartService: CartService, private router: Router, private loginService: LoginService, private userService: UserService) { 
   }
   
   ngOnInit(): void {
@@ -49,14 +50,34 @@ export class CarritoComponent implements OnInit {
     })
 
   }
-  removeProduct(product: Producto){
-    this.cartService
-      .delete(product)
-      .subscribe((products) => {
-        this.addedProducts = this.addedProducts.filter((prod) => (prod.id !== product.id))
-        this.totalPrice = this.getTotalPrice(this.addedProducts)
-      })
-  }
+  removeProduct(product: Producto) {
+    this.loginService.comprobar().subscribe(data => {
+      this.loggedUser = data?.email
+
+      if (this.loggedUser) {
+        this.cartService.getAllFromUser().subscribe(users => {
+          let user = users.find(user => user.email == this.loggedUser)
+          let userID = user ? user.id : 0
+          this.addedProducts = users[userID].carrito
+          user!.carrito = user!.carrito.filter(prod => prod.id != product.id)
+          this.userService.put(user!).subscribe(user => console.log(user))
+
+          this.addedProducts = this.addedProducts.filter((prod) => (prod.id !== product.id))
+          this.totalPrice = this.getTotalPrice(this.addedProducts)
+
+        })
+
+      } else {
+
+        this.cartService
+          .delete(product)
+          .subscribe((products) => {
+            this.addedProducts = this.addedProducts.filter((prod) => (prod.id !== product.id))
+            this.totalPrice = this.getTotalPrice(this.addedProducts)
+          })
+      }
+    })
+}
 
   increaseQuantity(product:Producto){
     this.cartService
