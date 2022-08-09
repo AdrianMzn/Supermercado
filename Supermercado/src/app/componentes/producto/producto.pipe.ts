@@ -10,7 +10,7 @@ export class ProductoPipe implements PipeTransform {
     if (!products){return []}
     if(!searchFilter){return products}
     searchFilter = searchFilter.toLocaleLowerCase()
-    return products.filter(product => product.nombre.includes(searchFilter))
+    return products.filter(product => product.nombre.toLocaleLowerCase().includes(searchFilter))
   }
 
 }
