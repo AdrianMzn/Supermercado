@@ -13,10 +13,10 @@
           "cantidadMaxima": 20
         },
         {
-          "id": 10,
+          "id": 5,
           "seccion": "carnes",
-          "nombre": "salchichon ibérico",
-          "precio": 15.9,
+          "nombre": "jamon",
+          "precio": 27.3,
           "cantidad": 1,
           "cantidadMaxima": 20
         }
@@ -31,6 +31,14 @@
           "seccion": "pescado",
           "nombre": "cabracho",
           "precio": 27,
+          "cantidad": 1,
+          "cantidadMaxima": 20
+        },
+        {
+          "id": 8,
+          "seccion": "pescado",
+          "nombre": "emperador",
+          "precio": 8.3,
           "cantidad": 1,
           "cantidadMaxima": 20
         }
@@ -367,5 +375,14 @@
       "cantidadMaxima": 20
     }
   ],
-  "addedProducts": []
+  "addedProducts": [
+    {
+      "id": 17,
+      "seccion": "panaderia",
+      "nombre": "baguette",
+      "precio": 0.5,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    }
+  ]
 }

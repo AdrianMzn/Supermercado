@@ -47,30 +47,16 @@ export class SpamComponent implements OnInit {
     })
   } */
 
-  ngOnInit():void {
-    this.loginService.comprobar().subscribe(data => this.loggedUser = data?.email)
-    if (this.loggedUser){
-      this.cartService.getAllFromUser().subscribe(users => {
-        let user = users.find(user => user.email == this.loggedUser)
+  ngOnInit(): void {
+    this.loginService.comprobar().subscribe(data => {
+      this.loggedUser = data?.email
+
+      if (this.loggedUser) {
+        this.cartService.getAllFromUser().subscribe(users => {
+          let user = users.find(user => user.email == this.loggedUser)
           let userID = user ? user.id : 0
           this.productosCarrito = users[userID].carrito
-        const preferencia = this.analizarPreferencias(this.productosCarrito)
-            this.preferencia = preferencia
-            this.prodService.getAll().subscribe((productos) => {
-              const productosPreferidos =
-                productos
-                  .filter(x => x.seccion == preferencia)
-                  .filter(prod => !this.productosCarrito.find(producto => producto.id == prod.id))
-              this.productosSugeridos = productosPreferidos.slice(0, 3)
-            })
-        
-      })
-     
-    } else {
-      this.cartService.getAllFromGuest().subscribe((productos) => {
-        if (productos.length >= 1) {
-          this.productosCarrito = productos
-          const preferencia = this.analizarPreferencias(productos)
+          const preferencia = this.analizarPreferencias(this.productosCarrito)
           this.preferencia = preferencia
           this.prodService.getAll().subscribe((productos) => {
             const productosPreferidos =
@@ -79,9 +65,26 @@ export class SpamComponent implements OnInit {
                 .filter(prod => !this.productosCarrito.find(producto => producto.id == prod.id))
             this.productosSugeridos = productosPreferidos.slice(0, 3)
           })
-        }
-      })
-    }
+
+        })
+
+      } else {
+        this.cartService.getAllFromGuest().subscribe((productos) => {
+          if (productos.length >= 1) {
+            this.productosCarrito = productos
+            const preferencia = this.analizarPreferencias(productos)
+            this.preferencia = preferencia
+            this.prodService.getAll().subscribe((productos) => {
+              const productosPreferidos =
+                productos
+                  .filter(x => x.seccion == preferencia)
+                  .filter(prod => !this.productosCarrito.find(producto => producto.id == prod.id))
+              this.productosSugeridos = productosPreferidos.slice(0, 3)
+            })
+          }
+        })
+      }
+    })
   }
 
   addProducto(producto: Producto) {
