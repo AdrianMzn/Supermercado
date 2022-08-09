@@ -1,24 +1,5 @@
 <div  id="checkoutForm">
-    <form (ngSubmit)="onSubmit()">
-        <div>
-            <input type='text' name="apellidos" placeholder="Nombre" />
-        </div>
-        <div>
-            <input type='text' name="apellidos" placeholder="Apellidos" />
-        </div>
-        <div>
-            <input type='text' name="direccion"  placeholder="Direccion" />
-        </div>
-        <div>
-            <input type='text' name="telefono" placeholder="Telefono" />
-        </div>
-        <div>
-            <input type='text' name="email" placeholder="Email" />
-        </div>
-        <input type="reset" value="Cancelar" id="cancelButton" (click)="returnHome()" />
-        <input type="submit" value="Confirm & checkout" id="checkoutButton" />
-    </form>
-
+    
     <h2>Resumen de tu pedido:</h2>
 
     <div>
@@ -38,4 +19,25 @@
             </tr>
         </table>
     </div>
+
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <input type='text' name="apellidos" placeholder="Nombre" />
+        </div>
+        <div>
+            <input type='text' name="apellidos" placeholder="Apellidos" />
+        </div>
+        <div>
+            <input type='text' name="direccion"  placeholder="Direccion" />
+        </div>
+        <div>
+            <input type='text' name="telefono" placeholder="Telefono" />
+        </div>
+        <div>
+            <input type='text' name="email" placeholder="Email" />
+        </div>
+        <input type="reset" value="Cancelar" id="cancelButton" (click)="returnHome()" />
+        <input type="submit" value="Confirm & checkout" id="checkoutButton" (click)="confirmarPedido()" />
+    </form>
+
 </div>

@@ -1,0 +1,54 @@
+h1 {
+    text-align: center;
+    padding: 2rem;
+    color: grey;
+}
+
+#name, #email {
+    width: 22rem;
+    height: 2.5rem;
+    border-color: bisque;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#message {
+    width: 22rem;
+    height: 15rem;
+    border-color: bisque;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.contenido {
+    display: grid;
+    height: 100%;
+    justify-items: center;
+    /* padding: 20px; */
+}
+
+
+label {
+    padding: 1em;
+    font-size: medium;
+}
+
+#btn_enviar {
+    height: 2.5rem;
+    width: 22rem;
+    background-color: bisque;
+    border-style: none;
+    border-width: 5px;
+    border-radius: 10px;
+    color: grey;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#btn_enviar:hover {
+    background-color: aliceblue;
+}
+
+.container {
+    margin-top: 1rem;
+}

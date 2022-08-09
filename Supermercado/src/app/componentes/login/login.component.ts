@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         },
         (error) => {
           console.log(error); // tb error.message
-          alert('Usuario no registrado');
+          alert('No se ha podido iniciar sesión. Compruebe los datos introducidos.');
         }
       );
     } else {
