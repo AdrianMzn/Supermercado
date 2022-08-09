@@ -20,6 +20,8 @@ export class ProductoComponent implements OnInit {
   loggedUser: string | null | undefined = ''
   selectedOption: string = ''
   categoria: string = ''
+  order: string = ''
+  selectedOrder: string = ''
 
 
   constructor(private prodService: ProductsService, private cartService: CartService, private loginService:LoginService, private userService: UserService) { }
@@ -47,7 +49,11 @@ export class ProductoComponent implements OnInit {
 
   selectCategory(){
     this.categoria = this.selectedOption
-    console.log(this.categoria)
+  }
+
+  selectOrder(){
+    this.order = this.selectedOrder
+    console.log(this.order)
   }
 
   

@@ -10,8 +10,8 @@
 
             <div style="margin-left: 50px">
                 Ordenar por
-                <select id="ordenSelect" class="form-select" aria-label="Ningun orden" (click)="filterProductos()">
-                    <option selected value="undefined">No ordenar</option>
+                <select id="ordenSelect" class="form-select" aria-label="Ningun orden" [(ngModel)]="selectedOrder" (click)="selectOrder()">
+                    <option selected value="ninguno">No ordenar</option>
                     <option value="alfabeticamente">Alfabeticamente</option>
                     <option value="precioMin">Por precio (menor primero)</option>
                     <option value="precioMax">Por precio (mayor primero)</option>
@@ -28,7 +28,7 @@
 
 
 <div id="listaProductos" class="container center" style="margin-top: 40px">
-    <div *ngFor="let producto of productos | productFilter: searchFilter | categoryProduct: categoria">
+    <div *ngFor="let producto of productos | productFilter: searchFilter | categoryProduct: categoria | orderProduct: order">
         <div class="tarjetaProducto center" [style.border-color]="getColor(producto.seccion)">
             <div class="item">
                 <h2>{{producto.nombre}}</h2>

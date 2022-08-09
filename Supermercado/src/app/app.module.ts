@@ -23,6 +23,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { CategoryProductPipe } from './componentes/producto/category-product.pipe';
+import { OrderProductPipe } from './componentes/producto/order-product.pipe';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -54,7 +55,8 @@ const misRutas: Routes = [
     CheckoutComponent,
     ProductoPipe,
     FooterComponent,
-    CategoryProductPipe
+    CategoryProductPipe,
+    OrderProductPipe
   ],
   imports: [
     BrowserModule,
