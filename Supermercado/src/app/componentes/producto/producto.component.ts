@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from '../../models/producto.model';
 import { ProductsService } from 'src/app/servicios/productos.service';
 import { CartService } from 'src/app/servicios/carrito.service';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-producto',
@@ -15,9 +16,10 @@ export class ProductoComponent implements OnInit {
   productosCarrito: Producto[] = [];
   orderTypeValue: string = "";
   searchFilter: string = ''
+  loggedUser: string | null | undefined = ''
 
 
-  constructor(private prodService: ProductsService, private cartService: CartService) { }
+  constructor(private prodService: ProductsService, private cartService: CartService, private loginService:LoginService) { }
 
   ngOnInit(): void {
     this.prodService.getAll().subscribe((productos) => {
@@ -35,14 +37,24 @@ export class ProductoComponent implements OnInit {
           selectCategorias.appendChild(opt);
         }
       }
-      console.log(this.categorias);
+      //console.log(this.categorias);
     });
     
   }
 
   
   addProducto(producto: Producto){
-    this.cartService.getAll().subscribe((devuelveprod) => (this.productosCarrito = devuelveprod))
+    this.loginService.comprobar().subscribe(data => this.loggedUser = data?.email)
+    if (this.loggedUser){
+      this.cartService.getAllFromUser().subscribe(users => {
+        let user = users.find(user => user.email == this.loggedUser)
+        let userID = user ? user.id : 0
+        this.productosCarrito = users[userID].carrito
+      })
+     } else {
+      this.cartService.getAllFromGuest().subscribe((devuelveprod) => (this.productosCarrito = devuelveprod))
+    }
+    
     const productoExiste: Producto|undefined= this.productosCarrito.find(p => producto.nombre==p.nombre)
 
     if(productoExiste){
@@ -54,8 +66,7 @@ export class ProductoComponent implements OnInit {
         ...producto,cantidad:1
       }
       this.cartService.add(nuevoProducto).subscribe((prod) => (this.productosCarrito.push(prod)))
-    }
-    
+    }  
   }
 
 /*   addProductoID(productoId: number){

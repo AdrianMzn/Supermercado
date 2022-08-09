@@ -17,7 +17,16 @@
     {
       "id": 1,
       "email": "mocktest2@mock.com",
-      "carrito": []
+      "carrito": [
+        {
+          "id": 12,
+          "seccion": "pescado",
+          "nombre": "mejillones",
+          "precio": 8.8,
+          "cantidad": 2,
+          "cantidadMaxima": 20
+        }
+      ]
     }
   ],
   "products": [
@@ -352,35 +361,11 @@
   ],
   "addedProducts": [
     {
-      "id": 1,
-      "seccion": "frutas",
-      "nombre": "paraguaya",
-      "precio": 2.5,
-      "cantidad": 3,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 2,
-      "seccion": "frutas",
-      "nombre": "manzana",
-      "precio": 3.3,
-      "cantidad": 4,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 5,
+      "id": 4,
       "seccion": "carnes",
-      "nombre": "jamon",
-      "precio": 27.3,
-      "cantidad": 1,
-      "cantidadMaxima": 20
-    },
-    {
-      "id": 7,
-      "seccion": "pescado",
-      "nombre": "bonito",
-      "precio": 9.3,
-      "cantidad": 1,
+      "nombre": "chuletón tomahawk",
+      "precio": 22.3,
+      "cantidad": 7,
       "cantidadMaxima": 20
     }
   ]

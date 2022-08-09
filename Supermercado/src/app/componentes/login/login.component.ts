@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
       (data) => {
         console.log('Sesión iniciada');
         this.logueado = true;
-        this.router.navigateByUrl('carrito');
+        this.router.navigateByUrl('productos');
       },
       (error) => {
         console.log(error);
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       this.loginService.registro(this.email, this.password).then(
         (data) => {
           alert('Usuario registrado');
-          this.router.navigateByUrl('carrito');
+          this.router.navigateByUrl('productos');
         },
         (error) => {
           console.log(error); // tb error.message

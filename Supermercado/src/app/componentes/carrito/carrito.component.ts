@@ -2,6 +2,8 @@ import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { Producto } from 'src/app/models/producto.model';
 import { CartService } from 'src/app/servicios/carrito.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/User';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-carrito',
@@ -10,11 +12,12 @@ import { Router } from '@angular/router';
 })
 export class CarritoComponent implements OnInit {
 
+  loggedUser: string | null | undefined = ''
   addedProducts: Producto[] = []
   totalPrice: number = 0
   getTotalPrice(array: Producto[]):number {return Math.round(array.reduce((acc, prod) => (acc + prod.precio * prod.cantidad), 0) * 100) / 100;}
 
-  constructor(private cartService: CartService, private router: Router) { 
+  constructor(private cartService: CartService, private router: Router, private loginService: LoginService) { 
   }
   
   ngOnInit(): void {
@@ -25,10 +28,26 @@ export class CarritoComponent implements OnInit {
   }
 
   getAllCartItems(){
-    this.cartService.getAll().subscribe((products) => {
-      this.addedProducts = products
-      this.totalPrice = this.getTotalPrice(this.addedProducts)
+    this.loginService.comprobar().subscribe(data => {
+      this.loggedUser = data?.email
+      
+      if (this.loggedUser){
+        console.log('hay alguien conectado')
+        this.cartService.getAllFromUser().subscribe(users => {
+          let user = users.find(user => user.email == this.loggedUser)
+          let userID = user ? user.id : 0
+          this.addedProducts = users[userID].carrito
+          this.totalPrice = this.getTotalPrice(this.addedProducts)
+        })
+      } else {
+        console.log('nadie conectado')
+        this.cartService.getAllFromGuest().subscribe((products) => {
+          this.addedProducts = products
+          this.totalPrice = this.getTotalPrice(this.addedProducts)
+        })
+      }
     })
+
   }
   removeProduct(product: Producto){
     this.cartService
