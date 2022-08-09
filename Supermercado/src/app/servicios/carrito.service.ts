@@ -67,6 +67,17 @@ export class CartService {
       )
   }
 
+  addToUser(user: User): Observable<User>{
+    const urlToUpdate = `${this.userBaseUrl}/${user.id}`
+    return this.http
+      .put<User>(urlToUpdate, user)
+      .pipe(
+        tap(() => {
+          this.refreshCart.next()
+        })
+      )
+  }
+
   delete(product: Producto): Observable<Producto>{
     const urlToRemove = `${this.baseUrl}/${product.id}`
     return this.http.delete<Producto>(urlToRemove)
@@ -77,6 +88,11 @@ export class CartService {
     const updatedProduct = { ...product, cantidad: product.cantidad + 1 }
 
     return this.http.put<Producto>(urlToUpdate, updatedProduct)
+  }
+
+  plusOneToUser(user: User): Observable<User> {
+    const urlToUpdate = `${this.userBaseUrl}/${user.id}`
+    return this.http.put<User>(urlToUpdate, user)
   }
 
   minusOne(product: Producto): Observable<Producto>{

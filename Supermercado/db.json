@@ -19,11 +19,11 @@
       "email": "mocktest2@mock.com",
       "carrito": [
         {
-          "id": 12,
-          "seccion": "pescado",
-          "nombre": "mejillones",
-          "precio": 8.8,
-          "cantidad": 2,
+          "id": 6,
+          "seccion": "carnes",
+          "nombre": "mortadela",
+          "precio": 12.3,
+          "cantidad": 1,
           "cantidadMaxima": 20
         }
       ]
@@ -366,6 +366,22 @@
       "nombre": "chuletón tomahawk",
       "precio": 22.3,
       "cantidad": 7,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 6,
+      "seccion": "carnes",
+      "nombre": "mortadela",
+      "precio": 12.3,
+      "cantidad": 1,
+      "cantidadMaxima": 20
+    },
+    {
+      "id": 22,
+      "seccion": "carnes",
+      "nombre": "picada de ternera",
+      "precio": 5.87,
+      "cantidad": 1,
       "cantidadMaxima": 20
     }
   ]
