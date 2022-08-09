@@ -137,7 +137,7 @@ export class ProductoComponent implements OnInit {
     return '';
       
   }
-
+/* 
   compareAlf( a: Producto, b: Producto ) {
     if ( a.nombre < b.nombre ){
       return -1;
@@ -181,7 +181,7 @@ export class ProductoComponent implements OnInit {
   filterProductos(){
     console.log('nothing')
 
-/*     let categoria = (<HTMLInputElement>document.getElementById("categoriaSelect")).value;
+     let categoria = (<HTMLInputElement>document.getElementById("categoriaSelect")).value;
     this.orderTypeValue = (<HTMLInputElement>document.getElementById("ordenSelect")).value;
 
     let productosFilted = this.productos.filter(producto => (producto.seccion == categoria) || categoria == "undefined");
@@ -252,8 +252,8 @@ export class ProductoComponent implements OnInit {
       divItem.innerHTML = productoHTML;
       divTarjetaProducto.appendChild(divItem);
       listaProductos.appendChild(divTarjetaProducto);
-    } */
-  }
+    } 
+  }*/
 
 }
 

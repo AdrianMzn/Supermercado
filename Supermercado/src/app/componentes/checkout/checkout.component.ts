@@ -24,20 +24,26 @@ export class CheckoutComponent implements OnInit {
   constructor(private router: Router, private cartService: CartService, private loginService:LoginService) { }
 
   ngOnInit(): void {
-    this.loginService.comprobar().subscribe(data => this.loggedUser = data?.email)
-    if (this.loggedUser){
-      this.cartService.getAllFromUser().subscribe(users => {
-        let user = users.find(user => user.email == this.loggedUser)
-        let userID = user ? user.id : 0
-        this.productosCarrito = users[userID].carrito
-        this.totalPrice = this.getTotalPrice(this.productosCarrito)
-      })
-    } else {
-      this.cartService.getAllFromGuest().subscribe((products) => {
-        this.productosCarrito = products
-        this.totalPrice = this.getTotalPrice(this.productosCarrito)
-      })
-    }
+    this.loginService.comprobar().subscribe(data => {
+      this.loggedUser = data?.email
+
+      if (this.loggedUser){
+        this.cartService.getAllFromUser().subscribe(users => {
+          let user = users.find(user => user.email == this.loggedUser)
+          let userID = user ? user.id : 0
+          this.productosCarrito = users[userID].carrito
+          this.totalPrice = this.getTotalPrice(this.productosCarrito)
+        })
+      } else {
+        this.cartService.getAllFromGuest().subscribe((products) => {
+          this.productosCarrito = products
+          this.totalPrice = this.getTotalPrice(this.productosCarrito)
+        })
+      }
+    
+    
+    })
+    
     
   }
 

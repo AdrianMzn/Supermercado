@@ -41,6 +41,14 @@
           "precio": 8.3,
           "cantidad": 1,
           "cantidadMaxima": 20
+        },
+        {
+          "id": 0,
+          "seccion": "frutas",
+          "nombre": "naranjas",
+          "precio": 2.3,
+          "cantidad": 1,
+          "cantidadMaxima": 20
         }
       ]
     }
