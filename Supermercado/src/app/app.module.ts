@@ -22,6 +22,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { CategoryProductPipe } from './componentes/producto/category-product.pipe';
 
 const misRutas: Routes = [
   { path: 'c1', component: Componente1Component },
@@ -52,7 +53,8 @@ const misRutas: Routes = [
     SpamComponent,
     CheckoutComponent,
     ProductoPipe,
-    FooterComponent
+    FooterComponent,
+    CategoryProductPipe
   ],
   imports: [
     BrowserModule,

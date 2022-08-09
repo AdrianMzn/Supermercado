@@ -3,8 +3,8 @@
         <div class="form-group" style="display:flex">
             <div >
                 Seleccione categoría
-                <select id="categoriaSelect" class="form-select" aria-label="Ninguna categoría" (click)="filterProductos()">
-                    <option selected value="undefined">Ninguna categoría</option>
+                <select id="categoriaSelect" class="form-select" aria-label="Ninguna categoría" [(ngModel)]="selectedOption" (click)="selectCategory()">
+                    <option selected value="todas">Todas</option>
                 </select>
             </div>
 
@@ -28,7 +28,7 @@
 
 
 <div id="listaProductos" class="container center" style="margin-top: 40px">
-    <div *ngFor="let producto of productos | productFilter: searchFilter">
+    <div *ngFor="let producto of productos | productFilter: searchFilter | categoryProduct: categoria">
         <div class="tarjetaProducto center" [style.border-color]="getColor(producto.seccion)">
             <div class="item">
                 <h2>{{producto.nombre}}</h2>

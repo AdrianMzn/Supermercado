@@ -18,6 +18,8 @@ export class ProductoComponent implements OnInit {
   orderTypeValue: string = "";
   searchFilter: string = ''
   loggedUser: string | null | undefined = ''
+  selectedOption: string = ''
+  categoria: string = ''
 
 
   constructor(private prodService: ProductsService, private cartService: CartService, private loginService:LoginService, private userService: UserService) { }
@@ -41,6 +43,11 @@ export class ProductoComponent implements OnInit {
       //console.log(this.categorias);
     });
     
+  }
+
+  selectCategory(){
+    this.categoria = this.selectedOption
+    console.log(this.categoria)
   }
 
   
@@ -166,8 +173,9 @@ export class ProductoComponent implements OnInit {
   }
 
   filterProductos(){
+    console.log('nothing')
 
-    let categoria = (<HTMLInputElement>document.getElementById("categoriaSelect")).value;
+/*     let categoria = (<HTMLInputElement>document.getElementById("categoriaSelect")).value;
     this.orderTypeValue = (<HTMLInputElement>document.getElementById("ordenSelect")).value;
 
     let productosFilted = this.productos.filter(producto => (producto.seccion == categoria) || categoria == "undefined");
@@ -238,7 +246,7 @@ export class ProductoComponent implements OnInit {
       divItem.innerHTML = productoHTML;
       divTarjetaProducto.appendChild(divItem);
       listaProductos.appendChild(divTarjetaProducto);
-    }
+    } */
   }
 
 }
