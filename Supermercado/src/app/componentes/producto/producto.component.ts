@@ -121,7 +121,7 @@ export class ProductoComponent implements OnInit {
   }
 
  */
-  getColor(seccion: string){
+/*   getColor(seccion: string){
     if(seccion == 'frutas'){
       return 'mediumseagreen';
     }
@@ -136,7 +136,7 @@ export class ProductoComponent implements OnInit {
 
     return '';
       
-  }
+  } */
 /* 
   compareAlf( a: Producto, b: Producto ) {
     if ( a.nombre < b.nombre ){

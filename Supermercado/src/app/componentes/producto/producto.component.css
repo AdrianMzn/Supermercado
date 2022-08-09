@@ -1,9 +1,11 @@
 .tarjetaProducto{
     width: 300px;
     margin: 20px;
-    border-radius: 20%;
+    padding: 10px;
+    border-radius: 8%;
     border-width: 5px;
     border-style: solid;
+    border-color: rgb(243, 196, 139);
 }
 
 .center {
